@@ -32,3 +32,4 @@ portfolio_dir: "projects"
 related_project_keys: ["category", "technology"]
 related_min_common: 0.7
 
+google_analytics: UA-83598448-1
