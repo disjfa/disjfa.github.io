@@ -1,0 +1,33 @@
+{
+  "name": "disjfa.github.io",
+  "version": "0.1.0",
+  "description": "disjfa.github.io main page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disjfa/disjfa.github.io.git"
+  },
+  "keywords": [
+    "project",
+    "disjfa",
+    "html",
+    "css",
+    "sass",
+    "javascript"
+  ],
+  "author": "disjfa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/disjfa/disjfa.github.io/issues"
+  },
+  "homepage": "https://github.com/disjfa/disjfa.github.io#readme",
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0"
+  }
+}

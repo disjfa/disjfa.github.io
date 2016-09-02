@@ -1,0 +1,16 @@
+<nav role="navigation" class="navbar navbar-dark bg-inverse navbar-full">
+    <div class="container">
+        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#main-menu"
+                aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="row hidden-sm-up"></div>
+        <div class="collapse navbar-toggleable-xs" id="main-menu">
+            <ul class="nav navbar-nav">
+                {% include menu.html group='projects' %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
