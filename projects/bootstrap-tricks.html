@@ -1,0 +1,33 @@
+---
+layout: default
+group: projects
+title: Bootstrap tricks
+image: /img/projects/bootstrap-tricks.jpg
+lead: Simple and useful tricks using bootstrap (4)
+---
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>
+                {{ page.title }}
+            </h1>
+            <p>
+                Examples of how to use the bootstrap css framework in the wild.
+            </p>
+            <div class="btn-group">
+                <a href="http://bootstrap-tricks.dimme.nl/" class="btn btn-outline-primary" aria-label="View the bootstrap tricks">
+                    <i class="fa fa-desktop"></i>
+                    example
+                </a>
+                <a href="https://github.com/disjfa/bootstrap-tricks" class="btn btn-outline-primary" aria-label="Get the source on github">
+                    <i class="fa fa-github"></i>
+                    github
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{ page.image | prepend: site.baseurl }}" alt="View of the bootstrap tricks website" class="img-thumbnail">
+        </div>
+    </div>
+
+</div>

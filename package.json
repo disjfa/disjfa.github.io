@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/disjfa/disjfa.github.io#readme",
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "font-awesome": "^4.6.3",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",

@@ -1,0 +1,33 @@
+---
+layout: default
+group: projects
+title: Vuetify sidebar template
+image: /img/projects/vuetify-sidebar-template.jpg
+lead: An example using vuetify and adding a sidebar
+---
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>
+                {{ page.title }}
+            </h1>
+            <p>
+                An example using the <a href="https://vuetifyjs.com/">vuetify.js</a> framework and adding a router on the page.
+            </p>
+            <div class="btn-group">
+                <a href="https://disjfa.github.io/vuetify-sidebar-template/" class="btn btn-outline-primary" aria-label="View the sidebar template">
+                    <i class="fa fa-desktop"></i>
+                    example
+                </a>
+                <a href="https://github.com/disjfa/vuetify-sidebar-template" class="btn btn-outline-primary" aria-label="Get the source on github">
+                    <i class="fa fa-github"></i>
+                    github
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{ page.image | prepend: site.baseurl }}" alt="View of the bootstrap tricks website" class="img-thumbnail">
+        </div>
+    </div>
+
+</div>

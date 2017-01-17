@@ -1,16 +1,25 @@
-<nav role="navigation" class="navbar navbar-dark bg-inverse navbar-full">
-    <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <button class="navbar-toggler hidden-sm-up pull-right" type="button" data-toggle="collapse" data-target="#main-menu"
-                aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-            &#9776;
-        </button>
-        <div class="row hidden-sm-up"></div>
-        <div class="collapse navbar-toggleable-xs" id="main-menu">
-            <ul class="nav navbar-nav">
-                {% include menu.html group='projects' %}
-            </ul>
-        </div>
+<nav role="navigation" class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <div class="row hidden-sm-up"></div>
+    <div class="collapse navbar-collapse" id="main-menu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item{% if '/' == page.url %} active{% endif %}">
+                <a href="{{ '/' | prepend: site.baseurl }}" class="nav-link">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="projects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="projects">
+                    {% include dropdown.html group='projects' %}
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
 

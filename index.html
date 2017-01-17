@@ -4,11 +4,11 @@ group: main
 title: Home
 ---
 
-<div class="container p-t-2">
+<div class="container pt-2">
     <div class="row">
         {% for page in site.pages %}
             {% if page.title and page.group == 'projects' %}
-                <div class="col-sm-6">
+                <div class="col-12 col-lg-6 py-2">
                     <a href="{{ page.url }}" class="card" aria-label="Read more about {{ page.title }}">
                         <img src="{{ page.image }}" alt="{{ page.title }}" class="card-img-top img-fluid">
                         <div class="card-block">
