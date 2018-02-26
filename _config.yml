@@ -33,3 +33,28 @@ related_project_keys: ["category", "technology"]
 related_min_common: 0.7
 
 google_analytics: UA-83598448-1
+
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - assets
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - README.md
+  - webpack.config.js
+  - gulpfile.js

@@ -4,6 +4,9 @@ group: projects
 title: Vuetify sidebar template
 image: /img/projects/vuetify-sidebar-template.jpg
 lead: An example using vuetify and adding a sidebar
+categories:
+    - "vuejs"
+    - "vue-template"
 ---
 <div class="container pt-2">
     <div class="row">
@@ -11,6 +14,7 @@ lead: An example using vuetify and adding a sidebar
             <h1>
                 {{ page.title }}
             </h1>
+            {% include categories.html %}
             <p>
                 An example using the <a href="https://vuetifyjs.com/">vuetify.js</a> framework and adding a router on the page.
             </p>

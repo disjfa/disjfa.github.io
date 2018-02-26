@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="container py-3">
+    <h1>
+        Category
+        <small>#{{ page.tag }}</small>
+    </h1>
+
+    {% for p in site.pages %}
+        {% if p.categories contains page.tag %}
+            <a href="{{ p.url }}" class="project">
+                <div class="project-image">
+                    <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
+                </div>
+                <div class="project-body">
+                    <h3>{{ p.title }}</h3>
+                    <p>{{ p.lead }}</p>
+                </div>
+            </a>
+        {% endif %}
+
+    {% endfor %}
+</div>

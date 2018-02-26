@@ -4,6 +4,9 @@ group: projects
 title: Glynn admin
 image: /img/projects/glynn-admin.jpg
 lead: A simple admin page, responsive and beautiful
+categories:
+    - "bootstrap"
+    - "css"
 ---
 <div class="container pt-2">
     <div class="row">
@@ -11,6 +14,7 @@ lead: A simple admin page, responsive and beautiful
             <h1>
                 {{ page.title }}
             </h1>
+            {% include categories.html %}
             <p>
                 A simple admin page, responsive and beautiful. For useage on your own product. I has a lot of example
                 use cases you can implement on your own site or admin page.

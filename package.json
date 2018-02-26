@@ -4,7 +4,8 @@
   "description": "disjfa.github.io main page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "encore dev --watch",
+    "serve": "bundle exec jekyll serve"
   },
   "repository": {
     "type": "git",
@@ -13,8 +14,8 @@
   "keywords": [
     "project",
     "disjfa",
-    "html",
-    "css",
+    "htcssml",
+    "",
     "sass",
     "javascript"
   ],
@@ -25,10 +26,13 @@
   },
   "homepage": "https://github.com/disjfa/disjfa.github.io#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "^4.6.3",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0"
+    "@symfony/webpack-encore": "^0.19.0",
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "popper.js": "^1.13.0",
+    "sass-loader": "^6.0.6",
+    "workbox-webpack-plugin": "^2.1.2"
   }
 }

@@ -1,0 +1,7 @@
+<p>
+    {% for cat in page.categories %}
+        <a href="{{ "/category/" | append: cat | prepend: site.baseurl }}">
+            {{ cat }}
+        </a>
+    {% endfor %}
+</p>

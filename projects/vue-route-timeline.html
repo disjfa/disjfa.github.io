@@ -4,6 +4,9 @@ group: projects
 title: Vue route timeline
 image: /img/projects/vue-route-timeline.png
 lead: A timeline, in a vuejs project
+categories:
+    - "vuejs"
+    - "vue-plugin"
 ---
 <div class="container pt-2">
     <div class="row">
@@ -11,6 +14,7 @@ lead: A timeline, in a vuejs project
             <h1>
                 {{ page.title }}
             </h1>
+            {% include categories.html %}
             <p>
                 A <a href="https://vuejs.org/">vuejs</a> plugin using <a href="https://router.vuejs.org/">vue-router</a> and <a href="https://vuex.vuejs.org/">vuex</a> to log your route changes on a nice way.
                 Now you and your clients can click back to what they were doing without thinking!
