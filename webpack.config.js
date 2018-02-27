@@ -1,5 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
-var workboxPlugin = require('workbox-webpack-plugin');
+var WorkboxPlugin = require('workbox-webpack-plugin');
 
 Encore
   .setOutputPath('build/')
@@ -8,7 +8,7 @@ Encore
   .enableSassLoader()
   .autoProvidejQuery()
   .enableSourceMaps(!Encore.isProduction())
-  .addPlugin(new workboxPlugin({
+  .addPlugin(new WorkboxPlugin({
     globDirectory: '_site',
     globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
     swDest: './sw.js',
