@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog
+permalink: blog.html
+---
+<div class="container py-3">
+    <h1>Blog</h1>
+    {% for post in site.posts %}
+        <h4>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h4>
+        <div>
+            <small class="card-text text-muted">
+                {{ post.date | date: "%b %-d, %Y" }}
+            </small>
+        </div>
+        <p>{{ post.intro }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary">
+            Read more
+        </a>
+        <hr>
+    {% endfor %}
+</div>

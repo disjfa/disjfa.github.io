@@ -19,6 +19,10 @@ importScripts('workbox-sw.prod.v2.1.2.js');
  */
 const fileManifest = [
   {
+    "url": "blog.html",
+    "revision": "09be021f9680b322b9684d8a363e8683"
+  },
+  {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
     "revision": "af7ae505a9eed503f8b8e6982036873e"
   },
@@ -36,39 +40,39 @@ const fileManifest = [
   },
   {
     "url": "build/main.js",
-    "revision": "6a8ba21d92bccfdc9da41f1e1b0f7402"
+    "revision": "1d6354968e68940fc0ce722ce55c4197"
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "df855a41d69ac3a8437ec368369d43d4"
+    "revision": "5d4cabf717b233119f7c27d7700ea83f"
   },
   {
     "url": "category/css.html",
-    "revision": "cf275c963867e3f650fb9164d314785a"
+    "revision": "41974a64c516ca8595eecd4bfec5c5ad"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "06d8f6447299d1d623cc4b9bbd30515e"
+    "revision": "1f1766fb9e402c127ecfbada080adc76"
   },
   {
     "url": "category/symfony.html",
-    "revision": "ee45033d9941da6749182e4949372eeb"
+    "revision": "297d0f451eafccb04daff888841ff9a8"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "cd040d52281d3917837e94424556ee5a"
+    "revision": "1b942c419eaa55c1c0577a96df89d39b"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "4f667398ae78a046a1a012ace3134e01"
+    "revision": "c108b3045dc416dbba14612c5ebcb44a"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "531b18fe01d3261b041fb7d5cf93d3e7"
+    "revision": "a7bd4aa35a34c7eb6bb6a473e456c6b2"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "ffcc53dbba1c2571e1dfba60b3c60b4e"
+    "revision": "c95395238270a3ae20abbe4cf8b8ac65"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -284,43 +288,91 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "07bfb2c527f0e606322bf8e20fabf889"
+    "revision": "8f86d166b10e396436fb6a50e9e41eb1"
+  },
+  {
+    "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
+    "revision": "c969bdbcae8bf705a284002334316610"
+  },
+  {
+    "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
+    "revision": "858465f5be6f84891ab1d208cffc8aa2"
+  },
+  {
+    "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
+    "revision": "9a339d5a1c5895bcb21ed9318160281d"
+  },
+  {
+    "url": "medium/github/2018/02/13/create-examples.html",
+    "revision": "755e15a21f6d9fe560622d7807b4a3fb"
+  },
+  {
+    "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
+    "revision": "c867b31e22f4508a32fd546a13878916"
+  },
+  {
+    "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
+    "revision": "ffdb1f391767cba1c18986a5f2fe15b9"
+  },
+  {
+    "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
+    "revision": "02258ab22ca9002ca65dd8ebb644f86e"
+  },
+  {
+    "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
+    "revision": "3e1793eb9a8b34848b5820caeca4f634"
+  },
+  {
+    "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
+    "revision": "daf6dd60a2327df42ed2cbf36e1e224e"
+  },
+  {
+    "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
+    "revision": "b976d6f310fe3b5c1fb77321ebc684d1"
+  },
+  {
+    "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
+    "revision": "b99b1a6bf0787123352d82bc3007c523"
+  },
+  {
+    "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
+    "revision": "2ddb61248875fe8fb8d9d98e6dfd812a"
   },
   {
     "url": "projects/10k-2016.html",
-    "revision": "5aa601f426d342f18c767ba2a9248de2"
+    "revision": "88120bd3222fc47236923b03a0c8acc6"
   },
   {
     "url": "projects/bootstrap-tricks.html",
-    "revision": "cc97c774519d1a5726d18216ff2cd920"
+    "revision": "4b308d9ac49781724e61bb2194080452"
   },
   {
     "url": "projects/dimme-jour.html",
-    "revision": "62ceaf89d81adc2599b025b17842e0d8"
+    "revision": "d1520211c10b19638dee5d474705c7a9"
   },
   {
     "url": "projects/glynn-admin-symfony.html",
-    "revision": "122e179da3bb4cad5107447fb5a3b3f9"
+    "revision": "9c5705f641a49c494b2db4d50a09f961"
   },
   {
     "url": "projects/glynn-admin.html",
-    "revision": "bb2a7432a1bd7e711e48e96fe1d28ad3"
+    "revision": "be2c817a1a002ae31c319091c591c5f8"
   },
   {
     "url": "projects/ryoko-headers.html",
-    "revision": "ad5ab20e6c58e2d12a96ce8673ac0b9c"
+    "revision": "9d25ff572b42045c34d34a891f1e8a14"
   },
   {
     "url": "projects/vue-route-timeline.html",
-    "revision": "e3e27ebabf78f3974c1771f9a6174e8f"
+    "revision": "5bddd12226602cfde09ecc31064f24fa"
   },
   {
     "url": "projects/vuetify-sidebar-template.html",
-    "revision": "b0937305d9826942cd0c0f97f05d33dd"
+    "revision": "9a2510f416f6b6634ccbf8827d961751"
   },
   {
     "url": "sw.js",
-    "revision": "b5175197188feb3849d0841e6a81cf66"
+    "revision": "2dea1f1cbaed5c30a89aaad281ca8e4f"
   },
   {
     "url": "workbox-sw.prod.v2.1.2.js",
