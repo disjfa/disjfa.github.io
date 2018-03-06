@@ -1,0 +1,45 @@
+---
+layout: sidebar
+title: Blog
+---
+<h1 class="mb-3">
+    Blog
+    <small>#page{{ paginator.page }}</small>
+</h1>
+
+{% for post in paginator.posts %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="d-block">
+        {% if post.image %}
+            <img src="{{ post.image }}" alt="" class="img-fluid mb-2">
+        {% endif %}
+        <h4>
+            {{ post.title }}
+        </h4>
+    </a>
+    <div>
+        <small class="card-text text-muted">
+            {{ post.date | date: "%b %-d, %Y" }}
+        </small>
+    </div>
+    <p>{{ post.intro }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary">
+        Read more
+    </a>
+    <hr>
+{% endfor %}
+
+<nav aria-label="Page navigation">
+    <div class="justify-content-center">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="btn btn-outline-primary">Previous</a>
+        {% else %}
+            <a href="#" class="btn btn-outline-primary disabled">Previous</a>
+        {% endif %}
+        <span class="btn disabled">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="btn btn-outline-primary">Next</a>
+        {% else %}
+            <a href="#" class="btn btn-outline-primary disabled">Next</a>
+        {% endif %}
+    </div>
+</nav>

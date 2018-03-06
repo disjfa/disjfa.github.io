@@ -17,6 +17,9 @@ related_min_common: 0.7
 
 google_analytics: UA-83598448-1
 
+paginate: 15
+paginate_path: "/blog/page:num/"
+
 collections:
   category:
     output: true
@@ -28,6 +31,9 @@ defaults:
       type: category
     values:
       layout: "category"
+
+gems:
+  - jekyll-paginate
 
 exclude:
   - Gemfile

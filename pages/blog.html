@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Blog
-permalink: blog.html
+permalink: /bloasdasdg/index.html
 ---
 <div class="container py-3">
     <h1>Blog</h1>
-    {% for post in site.posts %}
+{{ site.paginator }}
+    {% for post in paginator.posts %}
         <h4>
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h4>
@@ -20,4 +21,18 @@ permalink: blog.html
         </a>
         <hr>
     {% endfor %}
+    <!-- Pagination links -->
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% else %}
+            <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+            <span class="next ">Next</span>
+        {% endif %}
+    </div>
 </div>

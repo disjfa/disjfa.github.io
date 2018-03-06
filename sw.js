@@ -19,8 +19,12 @@ importScripts('workbox-sw.prod.v2.1.2.js');
  */
 const fileManifest = [
   {
-    "url": "blog.html",
-    "revision": "09be021f9680b322b9684d8a363e8683"
+    "url": "bloasdasdg/index.html",
+    "revision": "c6fe8b12821c5001c44669a72c6fb460"
+  },
+  {
+    "url": "blog/index.html",
+    "revision": "31a4f63a08bfea471bb50b5a34ec96ad"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -36,43 +40,59 @@ const fileManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "61a4713728e4e58b4386865930791842"
+    "revision": "1a0b33eb735df45b8a4db74529fe4a44"
   },
   {
     "url": "build/main.js",
-    "revision": "1d6354968e68940fc0ce722ce55c4197"
+    "revision": "d3afe337e64c4a27b22a499f62be00e6"
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "5d4cabf717b233119f7c27d7700ea83f"
+    "revision": "efc7e94fd9af10288cadea877eca8f3c"
   },
   {
     "url": "category/css.html",
-    "revision": "41974a64c516ca8595eecd4bfec5c5ad"
+    "revision": "d478786e8af4047feaecc1eeacdfc80b"
+  },
+  {
+    "url": "category/github.html",
+    "revision": "30894bdfffc4f1853acdfdd46c4eecac"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "1f1766fb9e402c127ecfbada080adc76"
+    "revision": "e27f62125a9497cdec76c9e0a4393310"
+  },
+  {
+    "url": "category/javascript.html",
+    "revision": "9b35acdebeb87dd78129718756629e29"
+  },
+  {
+    "url": "category/medium.html",
+    "revision": "70e1e6a5e2ee8427f0a3660788b4c956"
   },
   {
     "url": "category/symfony.html",
-    "revision": "297d0f451eafccb04daff888841ff9a8"
+    "revision": "46355782351f083c65a621c5b19ac20b"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "1b942c419eaa55c1c0577a96df89d39b"
+    "revision": "675e236adf1e8e29062dacd4ff12193a"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "c108b3045dc416dbba14612c5ebcb44a"
+    "revision": "80ae48d8dc7cf2b65a1625c8d8b86f9d"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "a7bd4aa35a34c7eb6bb6a473e456c6b2"
+    "revision": "1849c9470931371b4ebdb1358a44ca30"
+  },
+  {
+    "url": "category/webpack.html",
+    "revision": "9c48b69100992b9f1a6c9309e4fd8af8"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "c95395238270a3ae20abbe4cf8b8ac65"
+    "revision": "ad14aafacde92d51d8f1b2998d71c465"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -251,6 +271,18 @@ const fileManifest = [
     "revision": "86e62417be781704cf14cdbb192dfcca"
   },
   {
+    "url": "img/headers/ezra-jeffrey-77199.jpg",
+    "revision": "713602cdb1167ef860711fdfb6d4d343"
+  },
+  {
+    "url": "img/headers/kevin-364843.jpg",
+    "revision": "e117e39222aa1d75f4783e9c03076708"
+  },
+  {
+    "url": "img/headers/yingpis-kalayom-133680.jpg",
+    "revision": "99041e2aa1ec50ecd3286eef8dd4281c"
+  },
+  {
     "url": "img/logo.png",
     "revision": "a04504eb6dddf0617b24c4875ecd55c5"
   },
@@ -267,12 +299,20 @@ const fileManifest = [
     "revision": "c3c271b5eaf467accb346f4bb63c1421"
   },
   {
+    "url": "img/projects/fluent-bootstrap.png",
+    "revision": "c3930fa86775482b29163253e542240c"
+  },
+  {
     "url": "img/projects/glynn-admin-symfony.jpg",
     "revision": "d3d61c36716a89f7fafed277ab1fc0b0"
   },
   {
     "url": "img/projects/glynn-admin.jpg",
     "revision": "86b4b8183bd96aed27da949e660e240b"
+  },
+  {
+    "url": "img/projects/lyara-menu.png",
+    "revision": "49d8d87d82c7787931068da30066613f"
   },
   {
     "url": "img/projects/ryoko-headers.png",
@@ -283,96 +323,104 @@ const fileManifest = [
     "revision": "041b52e4880fa94fbf2b837825fc695c"
   },
   {
-    "url": "img/projects/vuetify-sidebar-template.jpg",
-    "revision": "bfd8705a3fd2723d9896a3826307621f"
+    "url": "img/projects/vuetify-sidebar-template.png",
+    "revision": "c681f172415c8e61b8600235699ebf66"
   },
   {
     "url": "index.html",
-    "revision": "8f86d166b10e396436fb6a50e9e41eb1"
+    "revision": "e0090391b111d3f4483464ab7790bae0"
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "c969bdbcae8bf705a284002334316610"
+    "revision": "48f5db7a65d242db1d05345230d61f65"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "858465f5be6f84891ab1d208cffc8aa2"
+    "revision": "4a6769d2d861b1fd0241185eed4d640c"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "9a339d5a1c5895bcb21ed9318160281d"
+    "revision": "fc2f6883878bdc4dba7c77fc74beea4e"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "755e15a21f6d9fe560622d7807b4a3fb"
+    "revision": "2b3647dd4f8ef6be9db7b95dc600e4eb"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "c867b31e22f4508a32fd546a13878916"
+    "revision": "5b4cf3e0d875ed18b11b015ab5bf80f6"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "ffdb1f391767cba1c18986a5f2fe15b9"
+    "revision": "1821bfd3c50a8ac56d17795837c03463"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "02258ab22ca9002ca65dd8ebb644f86e"
+    "revision": "1d509222a0108d3eda7da04799279705"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "3e1793eb9a8b34848b5820caeca4f634"
+    "revision": "63a08a08532f1b35f637dc8c7a0d30c8"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "daf6dd60a2327df42ed2cbf36e1e224e"
+    "revision": "ed22bc2dd19f6f88ca63d9ba80883f30"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "b976d6f310fe3b5c1fb77321ebc684d1"
+    "revision": "74ecf24a8a0103e05ccd5c40c93df2b3"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "b99b1a6bf0787123352d82bc3007c523"
+    "revision": "49218e1accad1a3aac181cdf87a008f5"
   },
   {
     "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
-    "revision": "2ddb61248875fe8fb8d9d98e6dfd812a"
+    "revision": "18964e4d88a4649d105f6aa9038f403f"
   },
   {
     "url": "projects/10k-2016.html",
-    "revision": "88120bd3222fc47236923b03a0c8acc6"
+    "revision": "1e8250df28930bea2c26d7c6e05aa903"
   },
   {
     "url": "projects/bootstrap-tricks.html",
-    "revision": "4b308d9ac49781724e61bb2194080452"
+    "revision": "2ebade8a4b9647a8edde8dfcc0a0d8f5"
   },
   {
     "url": "projects/dimme-jour.html",
-    "revision": "d1520211c10b19638dee5d474705c7a9"
+    "revision": "9c5aa056936b4af2fb4211476a1d6f2f"
+  },
+  {
+    "url": "projects/fluent-bootstrap.html",
+    "revision": "0716a9c230bbfd11208be9670798b3d3"
   },
   {
     "url": "projects/glynn-admin-symfony.html",
-    "revision": "9c5705f641a49c494b2db4d50a09f961"
+    "revision": "c786c8e478d6d0fcc2cdb78b5c82a1d9"
   },
   {
     "url": "projects/glynn-admin.html",
-    "revision": "be2c817a1a002ae31c319091c591c5f8"
+    "revision": "91ff39eb5767c791b2b73b20f758bf78"
+  },
+  {
+    "url": "projects/lyara-menu.html",
+    "revision": "c609ad152d39afd607b20ec579f571b6"
   },
   {
     "url": "projects/ryoko-headers.html",
-    "revision": "9d25ff572b42045c34d34a891f1e8a14"
+    "revision": "050eb0d7ed465d4d862a9e99c0e8b124"
   },
   {
     "url": "projects/vue-route-timeline.html",
-    "revision": "5bddd12226602cfde09ecc31064f24fa"
+    "revision": "9e8cf84a55f061df9589569ba3b109fe"
   },
   {
     "url": "projects/vuetify-sidebar-template.html",
-    "revision": "9a2510f416f6b6634ccbf8827d961751"
+    "revision": "683e8fd1a56aa508897037b80a98466f"
   },
   {
     "url": "sw.js",
-    "revision": "2dea1f1cbaed5c30a89aaad281ca8e4f"
+    "revision": "cb22960406d898925bc9861ce5644ce6"
   },
   {
     "url": "workbox-sw.prod.v2.1.2.js",

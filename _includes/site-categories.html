@@ -1,0 +1,8 @@
+<p>
+    {% for category in site.categories %}
+        {% assign cat = category | first %}
+            <a href="{{ "/category/" | append: cat | append: '.html' | prepend: site.baseurl }}" class="badge badge-light">
+                {{ cat }}
+            </a>
+    {% endfor %}
+</p>

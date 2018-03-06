@@ -1,25 +1,48 @@
 ---
-layout: default
+layout: sidebar
 ---
 
-<div class="container py-3">
-    <h1>
-        Category
-        <small>#{{ page.tag }}</small>
-    </h1>
+<h1>
+    Category
+    <small>#{{ page.tag }}</small>
+</h1>
+{% include site-categories.html %}
 
-    {% for p in site.pages %}
-        {% if p.categories contains page.tag %}
-            <a href="{{ p.url }}" class="project">
-                <div class="project-image">
-                    <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
-                </div>
-                <div class="project-body">
-                    <h3>{{ p.title }}</h3>
-                    <p>{{ p.lead }}</p>
-                </div>
-            </a>
+    {% assign intro = true %}
+<h3>In pages</h3>
+{% for p in site.pages %}
+    {% if p.categories contains page.tag %}
+        {% if intro %}
+            {% assign intro = false %}
         {% endif %}
-
-    {% endfor %}
-</div>
+        <a href="{{ p.url }}" class="project">
+            <div class="project-image">
+                <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
+            </div>
+            <div class="project-body">
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.lead }}</p>
+            </div>
+        </a>
+    {% endif %}
+{% endfor %}
+    {% if intro %}
+        <em>No pages found</em>
+    {% endif %}
+<hr>
+<h3>In posts</h3>
+{% assign intro = true %}
+{% for p in site.posts %}
+    {% if p.categories contains page.tag %}
+        {% if intro %}
+            {% assign intro = false %}
+        {% endif %}
+        <a href="{{ p.url }}" class="d-block">
+            <h3>{{ p.title }}</h3>
+            <p>{{ p.intro }}</p>
+        </a>
+    {% endif %}
+{% endfor %}
+{% if intro %}
+    <em>No posts found</em>
+{% endif %}

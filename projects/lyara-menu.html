@@ -1,0 +1,41 @@
+---
+layout: default
+group: projects
+title: Lyara menu
+image: /img/projects/lyara-menu.png
+lead: Menu template for menu on the left on desktop, and a bottom menu on mobile.
+categories:
+    - "css"
+---
+<div class="container pt-2">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>
+                {{ page.title }}
+            </h1>
+            {% include categories.html %}
+            <p>
+                A css template pack for adding a menu on your site. On a desktop it will show on the left side, and on a mobile it will add the menu in the footer.
+            </p>
+            <div class="btn-group">
+                <a href="https://disjfa.github.io/lyara-menu/" class="btn btn-outline-primary" aria-label="View example of the glynn admin template">
+                    <i class="fa fa-desktop"></i>
+                    example
+                </a>
+                <a href="https://www.npmjs.com/package/lyara-menu" class="btn btn-outline-primary">
+                    <i class="fa fa-link"></i>
+                    npm
+                </a>
+                <a href="https://github.com/disjfa/lyara-menu" class="btn btn-outline-primary" aria-label="Check the source on github">
+                    <i class="fa fa-github"></i>
+                    source
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{ page.image | prepend: site.baseurl }}" alt="Example of the glynn admin template"
+                 class="img-thumbnail">
+        </div>
+    </div>
+
+</div>
