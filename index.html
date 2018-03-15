@@ -9,15 +9,20 @@ title: Home
         {% for page in site.pages %}
             {% if page.title and page.group == 'projects' %}
                 <div class="col-12 col-xl-4 col-md-6 py-2">
-                    <a href="{{ page.url }}" class="card" aria-label="Read more about {{ page.title }}">
-                        <img src="{{ page.image }}" alt="{{ page.title }}" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ page.title }}</h3>
-                            <p class="card-text">
-                                {{ page.lead }}
-                            </p>
-                        </div>
+                    <a href="{{ page.url }}" aria-label="Read more about {{ page.title }}" class="faded">
+                        <img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
                     </a>
+                    <div class="py-2">
+                        <h3>{{ page.title }}</h3>
+                        {% include categories.html %}
+                        <p>
+                            {{ page.lead }}
+                        </p>
+                        <a href="{{ page.url }}" aria-label="Read more about {{ page.title }}" class="btn btn-outline-primary">
+                            <i class="fa fa-arrow-right"></i>
+                            Read more
+                        </a>
+                    </div>
                 </div>
             {% endif %}
         {% endfor %}

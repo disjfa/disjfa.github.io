@@ -24,7 +24,7 @@ const fileManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "31a4f63a08bfea471bb50b5a34ec96ad"
+    "revision": "c6bb2e4487c42c604e26806f390959d6"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -40,59 +40,59 @@ const fileManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "1a0b33eb735df45b8a4db74529fe4a44"
+    "revision": "274e94e40c7db21eff0970499207557c"
   },
   {
     "url": "build/main.js",
-    "revision": "d3afe337e64c4a27b22a499f62be00e6"
+    "revision": "69b0bfe2886dd5be3fdcb92129f0a3bc"
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "efc7e94fd9af10288cadea877eca8f3c"
+    "revision": "8186516f1e1830885e7b78a0f841da22"
   },
   {
     "url": "category/css.html",
-    "revision": "d478786e8af4047feaecc1eeacdfc80b"
+    "revision": "1842a88cc371dec7cd81a7f9c492f518"
   },
   {
     "url": "category/github.html",
-    "revision": "30894bdfffc4f1853acdfdd46c4eecac"
+    "revision": "88e0a6bf8c0dc34c4eccc99efafdf696"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "e27f62125a9497cdec76c9e0a4393310"
+    "revision": "1c95acc3942dad5c6ded074de6cf4a55"
   },
   {
     "url": "category/javascript.html",
-    "revision": "9b35acdebeb87dd78129718756629e29"
+    "revision": "bfce5772599feae058d15d95a922bf00"
   },
   {
     "url": "category/medium.html",
-    "revision": "70e1e6a5e2ee8427f0a3660788b4c956"
+    "revision": "be27b729581b6834338e3a47a61e8ddc"
   },
   {
     "url": "category/symfony.html",
-    "revision": "46355782351f083c65a621c5b19ac20b"
+    "revision": "bdeb71a1fda7744a0b62a02d2a2b6f31"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "675e236adf1e8e29062dacd4ff12193a"
+    "revision": "faa8d8cb8d7b9617c06d6152cee5a807"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "80ae48d8dc7cf2b65a1625c8d8b86f9d"
+    "revision": "e7e830bfb694bc05630ec23b8ce5884a"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "1849c9470931371b4ebdb1358a44ca30"
+    "revision": "9fe9a593b0c1c5dad5e4b94a7607b117"
   },
   {
     "url": "category/webpack.html",
-    "revision": "9c48b69100992b9f1a6c9309e4fd8af8"
+    "revision": "33eaf0e4e1d7b594820e58b3af1df089"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "ad14aafacde92d51d8f1b2998d71c465"
+    "revision": "08707661f9b4a36e3cf1bf3b9998c5bc"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -328,55 +328,55 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "e0090391b111d3f4483464ab7790bae0"
+    "revision": "c8e6e9c28179c704c4778fd72f9e3470"
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "48f5db7a65d242db1d05345230d61f65"
+    "revision": "04e7cdb8687907f085febefa31b7c9cb"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "4a6769d2d861b1fd0241185eed4d640c"
+    "revision": "c5560121dbcdf6f314daf8546814bb56"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "fc2f6883878bdc4dba7c77fc74beea4e"
+    "revision": "e0c4a9a379fb86c494d5567949e7fb49"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "2b3647dd4f8ef6be9db7b95dc600e4eb"
+    "revision": "897c1de1cca80f9575eefa96a29584d3"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "5b4cf3e0d875ed18b11b015ab5bf80f6"
+    "revision": "8979a129139d655e22465fecd8cb3c50"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "1821bfd3c50a8ac56d17795837c03463"
+    "revision": "b0e1228937b925a319fb14167c6aceee"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "1d509222a0108d3eda7da04799279705"
+    "revision": "e99985b6ee37532e60cf9ba3e3bf23dd"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "63a08a08532f1b35f637dc8c7a0d30c8"
+    "revision": "9503f736e3fbe47b5f535cfa6b2bad90"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "ed22bc2dd19f6f88ca63d9ba80883f30"
+    "revision": "9692bc0c6b468a84b011aa864bb0fa51"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "74ecf24a8a0103e05ccd5c40c93df2b3"
+    "revision": "b10c223e41571ec143cd8e2fa3996a19"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "49218e1accad1a3aac181cdf87a008f5"
+    "revision": "ae807e2ab6144e659713d6dd2950d2cf"
   },
   {
     "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
-    "revision": "18964e4d88a4649d105f6aa9038f403f"
+    "revision": "abf0b3a1d7765ff1e9e9bd5530e245cf"
   },
   {
     "url": "projects/10k-2016.html",
@@ -420,7 +420,7 @@ const fileManifest = [
   },
   {
     "url": "sw.js",
-    "revision": "cb22960406d898925bc9861ce5644ce6"
+    "revision": "b5cb11744537ec0dbae4ed4db2ed7eb9"
   },
   {
     "url": "workbox-sw.prod.v2.1.2.js",

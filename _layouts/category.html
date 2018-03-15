@@ -6,9 +6,9 @@ layout: sidebar
     Category
     <small>#{{ page.tag }}</small>
 </h1>
-{% include site-categories.html %}
+<hr>
 
-    {% assign intro = true %}
+{% assign intro = true %}
 <h3>In pages</h3>
 {% for p in site.pages %}
     {% if p.categories contains page.tag %}
@@ -16,7 +16,7 @@ layout: sidebar
             {% assign intro = false %}
         {% endif %}
         <a href="{{ p.url }}" class="project">
-            <div class="project-image">
+            <div class="project-image faded">
                 <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
             </div>
             <div class="project-body">
@@ -24,12 +24,13 @@ layout: sidebar
                 <p>{{ p.lead }}</p>
             </div>
         </a>
+        <hr>
     {% endif %}
 {% endfor %}
-    {% if intro %}
-        <em>No pages found</em>
-    {% endif %}
-<hr>
+{% if intro %}
+    <em>No pages found</em>
+    <hr>
+{% endif %}
 <h3>In posts</h3>
 {% assign intro = true %}
 {% for p in site.posts %}
@@ -41,6 +42,7 @@ layout: sidebar
             <h3>{{ p.title }}</h3>
             <p>{{ p.intro }}</p>
         </a>
+        <hr>
     {% endif %}
 {% endfor %}
 {% if intro %}
