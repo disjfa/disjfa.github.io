@@ -12,8 +12,8 @@ Encore
     globDirectory: '_site',
     globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
     swDest: './sw.js',
-    clientsClaim: true,
-    skipWaiting: true,
+    clientsClaim: false,
+    skipWaiting: false,
   }))
   .cleanupOutputBeforeBuild()
 ;

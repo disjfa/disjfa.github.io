@@ -20,11 +20,11 @@ importScripts('workbox-sw.prod.v2.1.2.js');
 const fileManifest = [
   {
     "url": "bloasdasdg/index.html",
-    "revision": "c6fe8b12821c5001c44669a72c6fb460"
+    "revision": "e9f0a3983ae9c492f8aeda834cb837cb"
   },
   {
     "url": "blog/index.html",
-    "revision": "c6bb2e4487c42c604e26806f390959d6"
+    "revision": "ef66b5cf3513f7b6947751d27b2f86a3"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -40,59 +40,67 @@ const fileManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "274e94e40c7db21eff0970499207557c"
+    "revision": "9567340e32f7975b234ccc3e0505d738"
   },
   {
     "url": "build/main.js",
-    "revision": "69b0bfe2886dd5be3fdcb92129f0a3bc"
+    "revision": "38bd6ece7a9b6c81878b07039e1d3962"
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "8186516f1e1830885e7b78a0f841da22"
+    "revision": "5fd476a5d95123562234005a4b127626"
+  },
+  {
+    "url": "category/css-component.html",
+    "revision": "d2cbc4738456f70f3f49f54d0886bcea"
+  },
+  {
+    "url": "category/css-template.html",
+    "revision": "fe19c18638f875e958287e65c9c6727a"
   },
   {
     "url": "category/css.html",
-    "revision": "1842a88cc371dec7cd81a7f9c492f518"
+    "revision": "c2d44745c598d35b3a47e492d02c8d73"
   },
   {
     "url": "category/github.html",
-    "revision": "88e0a6bf8c0dc34c4eccc99efafdf696"
+    "revision": "09f804fcc06dcecb688a9b1327955017"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "1c95acc3942dad5c6ded074de6cf4a55"
+    "revision": "628997e1dc8cbdbd20b9458e536df25e"
   },
   {
     "url": "category/javascript.html",
-    "revision": "bfce5772599feae058d15d95a922bf00"
+    "revision": "a25bb4c2b16d8f721520286a34e04308"
   },
   {
     "url": "category/medium.html",
-    "revision": "be27b729581b6834338e3a47a61e8ddc"
+    "revision": "2e547cc7aa2027b0c1923313d8470ec8"
   },
   {
     "url": "category/symfony.html",
-    "revision": "bdeb71a1fda7744a0b62a02d2a2b6f31"
+    "revision": "4587013a7446b2582bafaec09e0ca3e8"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "faa8d8cb8d7b9617c06d6152cee5a807"
+    "revision": "3d96d37477643a472e9ee7ef65fe4363"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "e7e830bfb694bc05630ec23b8ce5884a"
+    "revision": "d825e39c665699a32faff8a95193d0b0"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "9fe9a593b0c1c5dad5e4b94a7607b117"
+    "revision": "c3ffef587331084512a3bfb91d200923"
   },
   {
     "url": "category/webpack.html",
-    "revision": "33eaf0e4e1d7b594820e58b3af1df089"
+    "revision": "75fcfa0737830b7eb41cc733514f77f0"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "08707661f9b4a36e3cf1bf3b9998c5bc"
+    "revision": "e8f15e857e921eb9a77bb9905e5e9027"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -311,8 +319,16 @@ const fileManifest = [
     "revision": "86b4b8183bd96aed27da949e660e240b"
   },
   {
+    "url": "img/projects/hella-hero.png",
+    "revision": "0d518a58923a500698e2a2bf9f60cc81"
+  },
+  {
     "url": "img/projects/lyara-menu.png",
     "revision": "49d8d87d82c7787931068da30066613f"
+  },
+  {
+    "url": "img/projects/refero-list.png",
+    "revision": "fa30bb816639396037127b45ec5322ba"
   },
   {
     "url": "img/projects/ryoko-headers.png",
@@ -328,99 +344,107 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c8e6e9c28179c704c4778fd72f9e3470"
+    "revision": "6a2634dbe4719493467b93275bd78519"
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "04e7cdb8687907f085febefa31b7c9cb"
+    "revision": "b5959c2d3b0422b64009159471045dcb"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "c5560121dbcdf6f314daf8546814bb56"
+    "revision": "94bb4bfb259078991116f4b4ed578bc1"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "e0c4a9a379fb86c494d5567949e7fb49"
+    "revision": "db9806f142917a4b9653f507a419ef25"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "897c1de1cca80f9575eefa96a29584d3"
+    "revision": "8bac3f394c54161943c64e2a379c12e3"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "8979a129139d655e22465fecd8cb3c50"
+    "revision": "ce60a892313d1709e54048a14ca3e178"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "b0e1228937b925a319fb14167c6aceee"
+    "revision": "89e41d8c0813dbfa3700e3236b91f3fb"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "e99985b6ee37532e60cf9ba3e3bf23dd"
+    "revision": "23ef950de57ad4cf3e5356937ea183d5"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "9503f736e3fbe47b5f535cfa6b2bad90"
+    "revision": "3970a973ec1537462d57ec7218c0b84e"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "9692bc0c6b468a84b011aa864bb0fa51"
+    "revision": "3ddc2277c20343357a1f618d7ad46bbf"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "b10c223e41571ec143cd8e2fa3996a19"
+    "revision": "817556de335418fad9950eeb2224f168"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "ae807e2ab6144e659713d6dd2950d2cf"
+    "revision": "b63b170d3a9bb5dca3cc73c44ddb4fae"
   },
   {
     "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
-    "revision": "abf0b3a1d7765ff1e9e9bd5530e245cf"
+    "revision": "3ceddcac0d86b9dd4692e170e0288858"
   },
   {
     "url": "projects/10k-2016.html",
-    "revision": "1e8250df28930bea2c26d7c6e05aa903"
+    "revision": "82df61a9b8a99f5c445da6aa2c337b36"
   },
   {
     "url": "projects/bootstrap-tricks.html",
-    "revision": "2ebade8a4b9647a8edde8dfcc0a0d8f5"
+    "revision": "18edbfc413d2d21790852a987aa62aeb"
   },
   {
     "url": "projects/dimme-jour.html",
-    "revision": "9c5aa056936b4af2fb4211476a1d6f2f"
+    "revision": "988b8662bd9aaef9e31e84f5a13e4a06"
   },
   {
     "url": "projects/fluent-bootstrap.html",
-    "revision": "0716a9c230bbfd11208be9670798b3d3"
+    "revision": "3a7432252de3beb2205a1b359efa7d08"
   },
   {
     "url": "projects/glynn-admin-symfony.html",
-    "revision": "c786c8e478d6d0fcc2cdb78b5c82a1d9"
+    "revision": "163ee1fc43cddf8cb7d70fc163ba6efc"
   },
   {
     "url": "projects/glynn-admin.html",
-    "revision": "91ff39eb5767c791b2b73b20f758bf78"
+    "revision": "0196811894eb4d502eafec043114652e"
+  },
+  {
+    "url": "projects/hella-hero.html",
+    "revision": "3adb48a70c865a1e7b95a09f3c54abeb"
   },
   {
     "url": "projects/lyara-menu.html",
-    "revision": "c609ad152d39afd607b20ec579f571b6"
+    "revision": "e2a0626b16a79fb3fa9fe0cf1504f213"
+  },
+  {
+    "url": "projects/refero-list.html",
+    "revision": "7cf485e9c4b153fb0df9c3cbd6f20ab6"
   },
   {
     "url": "projects/ryoko-headers.html",
-    "revision": "050eb0d7ed465d4d862a9e99c0e8b124"
+    "revision": "43f70e0bcca4d2c0753806f5ead776c8"
   },
   {
     "url": "projects/vue-route-timeline.html",
-    "revision": "9e8cf84a55f061df9589569ba3b109fe"
+    "revision": "d5322f75bc216604dd4062ca9827c412"
   },
   {
     "url": "projects/vuetify-sidebar-template.html",
-    "revision": "683e8fd1a56aa508897037b80a98466f"
+    "revision": "14830b1677c7d87940a05becde2ab169"
   },
   {
     "url": "sw.js",
-    "revision": "b5cb11744537ec0dbae4ed4db2ed7eb9"
+    "revision": "6dd4727e714ff477616cfd320656a4b8"
   },
   {
     "url": "workbox-sw.prod.v2.1.2.js",
@@ -428,8 +452,5 @@ const fileManifest = [
   }
 ];
 
-const workboxSW = new self.WorkboxSW({
-  "skipWaiting": true,
-  "clientsClaim": true
-});
+const workboxSW = new self.WorkboxSW();
 workboxSW.precache(fileManifest);
