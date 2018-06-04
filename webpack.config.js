@@ -11,6 +11,7 @@ Encore
   .addPlugin(new GenerateSW({
     globDirectory: './_site',
     globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
+    swDest: './../service-worker.js',
   }))
   .cleanupOutputBeforeBuild()
 ;
