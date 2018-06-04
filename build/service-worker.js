@@ -1,23 +1,28 @@
-importScripts('workbox-sw.prod.v2.1.2.js');
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
+
+importScripts(
+  "/build/precache-manifest.29128ac77fbe4f4a70ce6eada50bf64d.js"
+);
 
 /**
- * DO NOT EDIT THE FILE MANIFEST ENTRY
- *
- * The method precache() does the following:
- * 1. Cache URLs in the manifest to a local cache.
- * 2. When a network request is made for any of these URLs the response
- *    will ALWAYS comes from the cache, NEVER the network.
- * 3. When the service worker changes ONLY assets with a revision change are
- *    updated, old cache entries are left as is.
- *
- * By changing the file manifest manually, your users may end up not receiving
- * new versions of files because the revision hasn't changed.
- *
- * Please use workbox-build or some other tool / approach to generate the file
- * manifest which accounts for changes to local files and update the revision
- * accordingly.
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
  */
-const fileManifest = [
+self.__precacheManifest = [
   {
     "url": "bloasdasdg/index.html",
     "revision": "e9f0a3983ae9c492f8aeda834cb837cb"
@@ -40,11 +45,19 @@ const fileManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "9567340e32f7975b234ccc3e0505d738"
+    "revision": "05dfa8de8b7f5a05b5aa4ac73b795283"
   },
   {
     "url": "build/main.js",
-    "revision": "38bd6ece7a9b6c81878b07039e1d3962"
+    "revision": "5058bae9d6aa6a3993528c2af7af44c5"
+  },
+  {
+    "url": "build/precache-manifest.c48b93ed5a9d5e3609f7ed2006ff0808.js",
+    "revision": "c48b93ed5a9d5e3609f7ed2006ff0808"
+  },
+  {
+    "url": "build/service-worker.js",
+    "revision": "cc04044c176a6c6caab07a3122614b05"
   },
   {
     "url": "category/bootstrap.html",
@@ -441,16 +454,7 @@ const fileManifest = [
   {
     "url": "projects/vuetify-sidebar-template.html",
     "revision": "14830b1677c7d87940a05becde2ab169"
-  },
-  {
-    "url": "sw.js",
-    "revision": "6dd4727e714ff477616cfd320656a4b8"
-  },
-  {
-    "url": "workbox-sw.prod.v2.1.2.js",
-    "revision": "685d1ceb6b9a9f94aacf71d6aeef8b51"
   }
-];
-
-const workboxSW = new self.WorkboxSW();
-workboxSW.precache(fileManifest);
+].concat(self.__precacheManifest || []);
+workbox.precaching.suppressWarnings();
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
