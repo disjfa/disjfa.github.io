@@ -1,5 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
-const {GenerateSW} = require('workbox-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 Encore
   .setOutputPath('build/')

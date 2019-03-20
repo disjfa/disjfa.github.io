@@ -24,6 +24,10 @@ collections:
   category:
     output: true
 
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 defaults:
   -
     scope:
@@ -32,7 +36,7 @@ defaults:
     values:
       layout: "category"
 
-gems:
+plugins:
   - jekyll-paginate
 
 exclude:
