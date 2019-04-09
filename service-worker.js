@@ -11,11 +11,17 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
 
 importScripts(
-  "/build/precache-manifest.d72407d27e4789531349dbc3b4aa93bb.js"
+  "/build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js"
 );
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -45,15 +51,15 @@ self.__precacheManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "d34bf6c7ef0925124265444e1f345bb3"
+    "revision": "0d498f42d587621f6be30fcc95007b2f"
   },
   {
     "url": "build/main.js",
-    "revision": "59692cf2f7c1a9ebe27bc87a524180a7"
+    "revision": "47c6f3e9745f229235b6393c33202a5b"
   },
   {
-    "url": "build/precache-manifest.483083e3362785f3e81011258ea16a2c.js",
-    "revision": "483083e3362785f3e81011258ea16a2c"
+    "url": "build/precache-manifest.df333e1204e1433ccb007a9414167d4c.js",
+    "revision": "df333e1204e1433ccb007a9414167d4c"
   },
   {
     "url": "category/bootstrap.html",
@@ -461,8 +467,7 @@ self.__precacheManifest = [
   },
   {
     "url": "service-worker.js",
-    "revision": "5c4428b5f1caf4fa186eef6656e757f0"
+    "revision": "e5f2af77b87fbd1d40d269bfd23c6248"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
