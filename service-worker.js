@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
 
 importScripts(
-  "/build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js"
+  "/build/precache-manifest.4496d7fc582659b23749c01524a68429.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -31,11 +31,15 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "bloasdasdg/index.html",
-    "revision": "d1ac25debe8e4e669a3665d892c4b699"
+    "revision": "26174f10edd19b42500a743d56dff8b1"
   },
   {
     "url": "blog/index.html",
-    "revision": "3fc962ddb21e1bbe9c04e106974abcad"
+    "revision": "3e2925b9e9015eaedaed5835550ebc51"
+  },
+  {
+    "url": "blog/page2/index.html",
+    "revision": "ed4fb91933de4857f01eba0a11dce418"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -55,71 +59,79 @@ self.__precacheManifest = [
   },
   {
     "url": "build/main.js",
-    "revision": "47c6f3e9745f229235b6393c33202a5b"
+    "revision": "c4a0208d4c52cee70cd13f00b42c22c4"
+  },
+  {
+    "url": "build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js",
+    "revision": "c2ed1c516ce71501e6a01be3ba256e22"
   },
   {
     "url": "build/precache-manifest.df333e1204e1433ccb007a9414167d4c.js",
     "revision": "df333e1204e1433ccb007a9414167d4c"
   },
   {
+    "url": "build/runtime.js",
+    "revision": "a24e2bcce2ef6b00b4c7fa39d898f731"
+  },
+  {
     "url": "category/bootstrap.html",
-    "revision": "2f0489be94992d23bed5ac1b225aa196"
+    "revision": "4adb88e9c2119b1d55d1c2e461299499"
   },
   {
     "url": "category/css-component.html",
-    "revision": "200485993170c093b6d7fd1b6537e1a7"
+    "revision": "a1ee07c51c9c8c6ec4ec51681d47a51b"
   },
   {
     "url": "category/css-template.html",
-    "revision": "256f4b7371cddcebbbd7e872e49a7e24"
+    "revision": "8540238e0784fc2cb65a68a8b61b1cc6"
   },
   {
     "url": "category/css.html",
-    "revision": "c8734ec33cd147a9ea8a6bb84d71cc99"
+    "revision": "7fa52f5c9b2d12419411cf5d3ae1d30d"
   },
   {
     "url": "category/github.html",
-    "revision": "803e7b45fedfb29f0cf66c8605087afe"
+    "revision": "6e8f3822585aad4f38be9ad442e71005"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "7c392ce48d4acdee6767d67584c6ec82"
+    "revision": "a4a1ec039e1ce9c22b8140cbeb7d0d5c"
   },
   {
     "url": "category/javascript.html",
-    "revision": "b5200d414f1266c1933fc2ad583c861f"
+    "revision": "65f758ac2817dacaa5050a108afd375a"
   },
   {
     "url": "category/medium.html",
-    "revision": "07a733b0c5276f06c793553f7d83b599"
+    "revision": "e6a8561a81a4fd9dba4a9bf345dd9c34"
   },
   {
     "url": "category/php.html",
-    "revision": "4639c2d790e1c5652598e06df5b04399"
+    "revision": "d04ca0a9c9ab976ca89452412b382782"
   },
   {
     "url": "category/symfony.html",
-    "revision": "40f6e44a62d215397928e4e58e9d2577"
+    "revision": "21f910c7228ff4ffaf4e9e0376f3bc8f"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "be26eb26061371d5d57ca89959ff080c"
+    "revision": "f262c10ba95fca14b6e33df38d73e794"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "75db36fcdbd852e520c7843edd630919"
+    "revision": "e8ef40e21c0b9282d0ea3b6c5d1a84a2"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "f1c3defd19b263a43b3de8eb09f02492"
+    "revision": "fae528e147cc5b19d27b5dfb65590505"
   },
   {
     "url": "category/webpack.html",
-    "revision": "55006ef45dadb4e25b0e4138d756d461"
+    "revision": "a6fd48b5d10f95504d4b2faf297617a3"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "7ad924b1d86286f302333ceb882ed155"
+    "revision": "7909849ea33d98b6d4449813061ef6b2"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -363,111 +375,123 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "79069b87ea80404964e6cd81a61b38e7"
+    "revision": "9e76faa9e1ba35c6c9922c03e28c6b22"
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "f3d77489b75e69b5055bd31214f1ce2c"
+    "revision": "b606aae4c7c90fc7a8077401b91cad2d"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "19a7424ebd3c7897bd6efb6955fcad32"
+    "revision": "76e0a2cf5e770041bede676e24928cff"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "454013cf5a9d8c207e684d3a4de4cf90"
+    "revision": "502c7597da3a5e425729ba83f5140def"
+  },
+  {
+    "url": "medium/css/symfony/2018/08/07/lets-get-started-with-css-grid.html",
+    "revision": "34e7809275a29408a9bdc56bccb6270c"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "a05c7a4974072f20b08e0b0fd10eaa38"
+    "revision": "6b173dd433e713732448062c55bdd4a8"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "193b10997359a5e20fd1b122636c6319"
+    "revision": "3b29f0e8f2f513ead43be39c67273a65"
+  },
+  {
+    "url": "medium/javascript/symfony/2018/08/07/lets-get-started-on-that-pwa.html",
+    "revision": "a4221c90fe484e4dd08663cdbfb79d67"
+  },
+  {
+    "url": "medium/php/symfony/2018/12/13/symfony-autowire-how-to.html",
+    "revision": "69c2a8b014fc0ba75fbf86a2d774a7e6"
   },
   {
     "url": "medium/php/symfony/2019/02/26/symfony-a-small-introduction.html",
-    "revision": "dfedf14874f19fad8234700a3a7468e0"
+    "revision": "df216b75a68f09d949decc47410dd99d"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "5eac9db3cb811e7a176ef7514b007d9b"
+    "revision": "0f7722237c649770f14943b012773bc0"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "ed3d4cfaa9b180173e16432f6e343078"
+    "revision": "201548e940e8c4b6bbd6ea69f623e35a"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "bdee6ecf9f55a06ca484bedfa13c72f7"
+    "revision": "0c3ee0ecbc5c4823cb72570413d277ee"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "ca1ca662c929503d496f913c306f1756"
+    "revision": "c7b04a9153e47349c32187cf6e56835e"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "ec3de7c1e06dc507220ecd3f46f02489"
+    "revision": "69614a6d76c23ee59c8b0a535cae8265"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "bf185e84028d0992f5d7948a0ae62d28"
+    "revision": "45646bb434855e1b6380cae7fc865f77"
   },
   {
     "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
-    "revision": "1563b05edad0d30545ca8c5a5f0106ba"
+    "revision": "b17fe2713d5edbd8527190acf4a7f200"
   },
   {
     "url": "projects/10k-2016.html",
-    "revision": "226f76c84cc3a42296746549e272779e"
+    "revision": "9f50879afd57c725c67641f3542e9728"
   },
   {
     "url": "projects/bootstrap-tricks.html",
-    "revision": "b15189b278fdf181a61bb5699d84d18d"
+    "revision": "1c8156774f2405ca18ebf04b68b14954"
   },
   {
     "url": "projects/dimme-jour.html",
-    "revision": "739bda5f7617010571f8b2dac9b65b44"
+    "revision": "6e5c7400e9f52588e97db6ccfc650b42"
   },
   {
     "url": "projects/fluent-bootstrap.html",
-    "revision": "bb2b990a2fc8c332cc549e63a6de1623"
+    "revision": "3971980765bb13af219c125557ceb926"
   },
   {
     "url": "projects/glynn-admin-symfony.html",
-    "revision": "3c937c6ac11f3ff5457a3912dc7bd349"
+    "revision": "0e2911ea33a00462249cd2297e23e90b"
   },
   {
     "url": "projects/glynn-admin.html",
-    "revision": "8a3b2c2d76dc4b70523e79a27501df20"
+    "revision": "04747a883a626c69865da8215c17a5fd"
   },
   {
     "url": "projects/hella-hero.html",
-    "revision": "a55003e9e740687fe0bce01674b51776"
+    "revision": "8c8563764706cef528cecf1d752218d3"
   },
   {
     "url": "projects/lyara-menu.html",
-    "revision": "9b949cdb99d9a27b9f417e1e224e53a0"
+    "revision": "7ade061b1ff74f038fbfc340f5de10e9"
   },
   {
     "url": "projects/refero-list.html",
-    "revision": "48d8e23bce5b0ab2774835285ec51df5"
+    "revision": "d2f136de76d059abb051660111abfb9c"
   },
   {
     "url": "projects/ryoko-headers.html",
-    "revision": "ff5f405d4b6c2c8182ed96a8499304c1"
+    "revision": "78e9dabebb3dc16d177198100dc3372f"
   },
   {
     "url": "projects/vue-route-timeline.html",
-    "revision": "c6f8fc044fb2f11fcd6f50eded6d966f"
+    "revision": "24eae400c528ff66d9fad2464d77eed4"
   },
   {
     "url": "projects/vuetify-sidebar-template.html",
-    "revision": "7e9cd94ed05a3a0acddc45e8d556214b"
+    "revision": "2f5a682f58784b54b37498e52ac36f4f"
   },
   {
     "url": "service-worker.js",
-    "revision": "e5f2af77b87fbd1d40d269bfd23c6248"
+    "revision": "3dfe14441a0f1e97ed75a895493a1395"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
