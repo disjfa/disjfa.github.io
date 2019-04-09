@@ -35,11 +35,11 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "3e2925b9e9015eaedaed5835550ebc51"
+    "revision": "c6b92b7aaf14e4e58d1fa5f1e740013e"
   },
   {
     "url": "blog/page2/index.html",
-    "revision": "ed4fb91933de4857f01eba0a11dce418"
+    "revision": "2fb21876575983516b9d5b085336287e"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -62,12 +62,12 @@ self.__precacheManifest = [
     "revision": "c4a0208d4c52cee70cd13f00b42c22c4"
   },
   {
-    "url": "build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js",
-    "revision": "c2ed1c516ce71501e6a01be3ba256e22"
+    "url": "build/precache-manifest.4496d7fc582659b23749c01524a68429.js",
+    "revision": "4496d7fc582659b23749c01524a68429"
   },
   {
-    "url": "build/precache-manifest.df333e1204e1433ccb007a9414167d4c.js",
-    "revision": "df333e1204e1433ccb007a9414167d4c"
+    "url": "build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js",
+    "revision": "c2ed1c516ce71501e6a01be3ba256e22"
   },
   {
     "url": "build/runtime.js",
@@ -75,63 +75,63 @@ self.__precacheManifest = [
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "4adb88e9c2119b1d55d1c2e461299499"
+    "revision": "a5168623939f855c971f645489dd7561"
   },
   {
     "url": "category/css-component.html",
-    "revision": "a1ee07c51c9c8c6ec4ec51681d47a51b"
+    "revision": "afaf33eb37cfbc5af517bfd1dd65e726"
   },
   {
     "url": "category/css-template.html",
-    "revision": "8540238e0784fc2cb65a68a8b61b1cc6"
+    "revision": "316230dcf72762de98196b461b55b1e7"
   },
   {
     "url": "category/css.html",
-    "revision": "7fa52f5c9b2d12419411cf5d3ae1d30d"
+    "revision": "800ff13ccd3bbef7803304b4a25a0ccf"
   },
   {
     "url": "category/github.html",
-    "revision": "6e8f3822585aad4f38be9ad442e71005"
+    "revision": "fe86316ba3086bb0c340f7ad33bff619"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "a4a1ec039e1ce9c22b8140cbeb7d0d5c"
+    "revision": "3c9a82eccbdb44f539d847adeafc3912"
   },
   {
     "url": "category/javascript.html",
-    "revision": "65f758ac2817dacaa5050a108afd375a"
+    "revision": "09b180479dbdff2f2b568e603d01c7b3"
   },
   {
     "url": "category/medium.html",
-    "revision": "e6a8561a81a4fd9dba4a9bf345dd9c34"
+    "revision": "e9ecf4dceeeea1615a5aca35c7b9ae6a"
   },
   {
     "url": "category/php.html",
-    "revision": "d04ca0a9c9ab976ca89452412b382782"
+    "revision": "b4bf51e733af101831d54ef229bb411b"
   },
   {
     "url": "category/symfony.html",
-    "revision": "21f910c7228ff4ffaf4e9e0376f3bc8f"
+    "revision": "eeec5c95fe002967b99818b8fca7f145"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "f262c10ba95fca14b6e33df38d73e794"
+    "revision": "a46f2ee4c634cfa0cc86dbd7fbde01eb"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "e8ef40e21c0b9282d0ea3b6c5d1a84a2"
+    "revision": "650d829743eca46bad0d13bd9040186f"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "fae528e147cc5b19d27b5dfb65590505"
+    "revision": "228d5e50297ad48dbdb403669c918e97"
   },
   {
     "url": "category/webpack.html",
-    "revision": "a6fd48b5d10f95504d4b2faf297617a3"
+    "revision": "affeeaa4320c4ef2211fcd890a99dc02"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "7909849ea33d98b6d4449813061ef6b2"
+    "revision": "55145e77b103b42681a54c9c86929fd2"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -379,67 +379,67 @@ self.__precacheManifest = [
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "b606aae4c7c90fc7a8077401b91cad2d"
+    "revision": "081419493efe52f671e4b2c7d5c1dac6"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "76e0a2cf5e770041bede676e24928cff"
+    "revision": "20a9fd504225d815863dabc8ef301715"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "502c7597da3a5e425729ba83f5140def"
+    "revision": "014eb0b2d925fbda2faceff5db40a572"
   },
   {
     "url": "medium/css/symfony/2018/08/07/lets-get-started-with-css-grid.html",
-    "revision": "34e7809275a29408a9bdc56bccb6270c"
+    "revision": "9cda29c5683e979d40983faaf50dbd68"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "6b173dd433e713732448062c55bdd4a8"
+    "revision": "9a6490e797334d041aea980fc72873fa"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "3b29f0e8f2f513ead43be39c67273a65"
+    "revision": "00763ece2a720ae9a52bda5749737e06"
   },
   {
     "url": "medium/javascript/symfony/2018/08/07/lets-get-started-on-that-pwa.html",
-    "revision": "a4221c90fe484e4dd08663cdbfb79d67"
+    "revision": "d3ebff73c110451254fc89dd985c54df"
   },
   {
     "url": "medium/php/symfony/2018/12/13/symfony-autowire-how-to.html",
-    "revision": "69c2a8b014fc0ba75fbf86a2d774a7e6"
+    "revision": "3490e6f893da294b274afdc6f83b0ba6"
   },
   {
     "url": "medium/php/symfony/2019/02/26/symfony-a-small-introduction.html",
-    "revision": "df216b75a68f09d949decc47410dd99d"
+    "revision": "1b38fcb5895aee87ab06e790d2ac18e8"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "0f7722237c649770f14943b012773bc0"
+    "revision": "f54a7902b7c3825e13670b88fe555a55"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "201548e940e8c4b6bbd6ea69f623e35a"
+    "revision": "0a21e2c7cd77bf74eb08fe8996d49d0c"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "0c3ee0ecbc5c4823cb72570413d277ee"
+    "revision": "768b6379b45a5390b405dabc4691b6d7"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "c7b04a9153e47349c32187cf6e56835e"
+    "revision": "40bf843e1caee8101df8818a5a512f79"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "69614a6d76c23ee59c8b0a535cae8265"
+    "revision": "c1b3676873bbd392be2b8e6eb223a2ab"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "45646bb434855e1b6380cae7fc865f77"
+    "revision": "3dee475c0bfd9cd7c7bd10f0b7f8a32e"
   },
   {
-    "url": "medium/webpack/2017/11/29/lets-webpack-encore.html",
-    "revision": "b17fe2713d5edbd8527190acf4a7f200"
+    "url": "medium/webpack/css/javascript/2017/11/29/lets-webpack-encore.html",
+    "revision": "7f56b0a084732e505533c3f174416426"
   },
   {
     "url": "projects/10k-2016.html",
@@ -491,7 +491,7 @@ self.__precacheManifest = [
   },
   {
     "url": "service-worker.js",
-    "revision": "3dfe14441a0f1e97ed75a895493a1395"
+    "revision": "b752dd2f19a38195fb9dac53adebe0d3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
