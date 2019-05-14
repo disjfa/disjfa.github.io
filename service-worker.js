@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
 
 importScripts(
-  "/build/precache-manifest.4496d7fc582659b23749c01524a68429.js"
+  "/build/precache-manifest.e7bc7cf5621795622cbd3358de23c7b6.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -35,11 +35,11 @@ self.__precacheManifest = [
   },
   {
     "url": "blog/index.html",
-    "revision": "c6b92b7aaf14e4e58d1fa5f1e740013e"
+    "revision": "f08ac9bebd07006b03c9f5b06b840734"
   },
   {
     "url": "blog/page2/index.html",
-    "revision": "2fb21876575983516b9d5b085336287e"
+    "revision": "0bfca399d14b9471a51006d8158dd5c5"
   },
   {
     "url": "build/fonts/fontawesome-webfont.af7ae505.woff2",
@@ -55,15 +55,31 @@ self.__precacheManifest = [
   },
   {
     "url": "build/main.css",
-    "revision": "0d498f42d587621f6be30fcc95007b2f"
+    "revision": "a24396bad88c4a0d1822555c2318059a"
   },
   {
     "url": "build/main.js",
     "revision": "c4a0208d4c52cee70cd13f00b42c22c4"
   },
   {
+    "url": "build/precache-manifest.08003f13c44bcbfa486b1084bd1268b8.js",
+    "revision": "08003f13c44bcbfa486b1084bd1268b8"
+  },
+  {
+    "url": "build/precache-manifest.2c13f32410f982b61934ab10052e6327.js",
+    "revision": "2c13f32410f982b61934ab10052e6327"
+  },
+  {
     "url": "build/precache-manifest.4496d7fc582659b23749c01524a68429.js",
     "revision": "4496d7fc582659b23749c01524a68429"
+  },
+  {
+    "url": "build/precache-manifest.59ac21a84b2dacbd8375cc3b3472ca05.js",
+    "revision": "59ac21a84b2dacbd8375cc3b3472ca05"
+  },
+  {
+    "url": "build/precache-manifest.ad18d478781a3d1c0da411f603578af9.js",
+    "revision": "ad18d478781a3d1c0da411f603578af9"
   },
   {
     "url": "build/precache-manifest.c2ed1c516ce71501e6a01be3ba256e22.js",
@@ -75,63 +91,63 @@ self.__precacheManifest = [
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "a5168623939f855c971f645489dd7561"
+    "revision": "3d8a832c151a845d2796392fbfadefa4"
   },
   {
     "url": "category/css-component.html",
-    "revision": "afaf33eb37cfbc5af517bfd1dd65e726"
+    "revision": "733944e7185fa08f8e3f1b91204c5aaa"
   },
   {
     "url": "category/css-template.html",
-    "revision": "316230dcf72762de98196b461b55b1e7"
+    "revision": "0e5a1c8aa2494dafee7461da52237b2e"
   },
   {
     "url": "category/css.html",
-    "revision": "800ff13ccd3bbef7803304b4a25a0ccf"
+    "revision": "382448d479487980249cb805133183dd"
   },
   {
     "url": "category/github.html",
-    "revision": "fe86316ba3086bb0c340f7ad33bff619"
+    "revision": "f4bc3ff7fcf53c334991a2e8597110ce"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "3c9a82eccbdb44f539d847adeafc3912"
+    "revision": "ec42674bc9aee74307a79b15e6d05ce3"
   },
   {
     "url": "category/javascript.html",
-    "revision": "09b180479dbdff2f2b568e603d01c7b3"
+    "revision": "917102d3f48d65fe1bacb84ba5ea1fc4"
   },
   {
     "url": "category/medium.html",
-    "revision": "e9ecf4dceeeea1615a5aca35c7b9ae6a"
+    "revision": "7875057802650e330835a2be1665c01e"
   },
   {
     "url": "category/php.html",
-    "revision": "b4bf51e733af101831d54ef229bb411b"
+    "revision": "01f5d17de0a2f1ece03546fd1a0328ce"
   },
   {
     "url": "category/symfony.html",
-    "revision": "eeec5c95fe002967b99818b8fca7f145"
+    "revision": "a6a42318209cd5ceab693d64ceb49808"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "a46f2ee4c634cfa0cc86dbd7fbde01eb"
+    "revision": "2f06ce5a6e9d0d903cd40d3dc76c8927"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "650d829743eca46bad0d13bd9040186f"
+    "revision": "c1924e03e8adaa0381fb67214fcc2116"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "228d5e50297ad48dbdb403669c918e97"
+    "revision": "5442652681eb4f2500c0289973746111"
   },
   {
     "url": "category/webpack.html",
-    "revision": "affeeaa4320c4ef2211fcd890a99dc02"
+    "revision": "0dad675414f72a860be4f594ca0aac28"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "55145e77b103b42681a54c9c86929fd2"
+    "revision": "3a87203dfbc8985be57d1fc4f4eddc0e"
   },
   {
     "url": "icon/android-chrome-144x144.png",
@@ -318,6 +334,10 @@ self.__precacheManifest = [
     "revision": "e117e39222aa1d75f4783e9c03076708"
   },
   {
+    "url": "img/headers/photo-1543966888-7c1dc482a810.jpg",
+    "revision": "c58844405da2526de8ddf97609f77793"
+  },
+  {
     "url": "img/headers/yingpis-kalayom-133680.jpg",
     "revision": "99041e2aa1ec50ecd3286eef8dd4281c"
   },
@@ -379,67 +399,71 @@ self.__precacheManifest = [
   },
   {
     "url": "medium/bootstrap/2016/12/28/writing-an-admin-template-in-14-lines-of-css-using-bootstrap.html",
-    "revision": "081419493efe52f671e4b2c7d5c1dac6"
+    "revision": "cce0494263a771d367d9404c0b1ba8a6"
   },
   {
     "url": "medium/bootstrap/2017/02/09/animate-a-open-and-closing-element-using-bootstraps-collapse.html",
-    "revision": "20a9fd504225d815863dabc8ef301715"
+    "revision": "03a4f08ab13b2070dc53159e5cc92a24"
   },
   {
     "url": "medium/bootstrap/2017/03/30/animate-a-bootstrap-carousel.html",
-    "revision": "014eb0b2d925fbda2faceff5db40a572"
+    "revision": "445a6fc65f3bacf65a32a5cd0322f211"
   },
   {
     "url": "medium/css/symfony/2018/08/07/lets-get-started-with-css-grid.html",
-    "revision": "9cda29c5683e979d40983faaf50dbd68"
+    "revision": "16a327cf5d8a31ec9fbd73b3ac589b7f"
   },
   {
     "url": "medium/github/2018/02/13/create-examples.html",
-    "revision": "9a6490e797334d041aea980fc72873fa"
+    "revision": "7b6f56b17aa42ef87e5f12e2b3b0957f"
   },
   {
     "url": "medium/javascript/2017/11/08/animate-with-intersection-observer.html",
-    "revision": "00763ece2a720ae9a52bda5749737e06"
+    "revision": "3b643ca17548e4dfb88a15812e0bde5e"
   },
   {
     "url": "medium/javascript/symfony/2018/08/07/lets-get-started-on-that-pwa.html",
-    "revision": "d3ebff73c110451254fc89dd985c54df"
+    "revision": "8d59b590c9a03f06761797985a9ebfcf"
   },
   {
     "url": "medium/php/symfony/2018/12/13/symfony-autowire-how-to.html",
-    "revision": "3490e6f893da294b274afdc6f83b0ba6"
+    "revision": "03395d1fabf0da01d95c0263ede46f2a"
   },
   {
     "url": "medium/php/symfony/2019/02/26/symfony-a-small-introduction.html",
-    "revision": "1b38fcb5895aee87ab06e790d2ac18e8"
+    "revision": "dfb36e56b5d4e5d133822e542f508953"
   },
   {
     "url": "medium/vue-plugin/2017/09/14/introducing-vue-route-timeline.html",
-    "revision": "f54a7902b7c3825e13670b88fe555a55"
+    "revision": "6a777f1840fc4063fca7a2a9fc87c89a"
+  },
+  {
+    "url": "medium/vue/vue-plugin/2019/05/14/vue-creating-custom-component.html",
+    "revision": "e849e071d9ab95609a07222fbc47f8ce"
   },
   {
     "url": "medium/vuejs/2017/01/20/using-vue-js-in-existing-websites-the-easy-way.html",
-    "revision": "0a21e2c7cd77bf74eb08fe8996d49d0c"
+    "revision": "81c8c98c0114c682e31616aa35d92ec9"
   },
   {
     "url": "medium/vuejs/2017/03/30/creating-navigation-using-vue-router.html",
-    "revision": "768b6379b45a5390b405dabc4691b6d7"
+    "revision": "a9ab6e240cc32c98a827db131f89d2ff"
   },
   {
     "url": "medium/vuejs/2017/05/18/lets-buid-a-vue-app.html",
-    "revision": "40bf843e1caee8101df8818a5a512f79"
+    "revision": "03b1941bbb23763d35803ee70f125f51"
   },
   {
     "url": "medium/vuejs/2017/09/14/lets-route-a-vue-app.html",
-    "revision": "c1b3676873bbd392be2b8e6eb223a2ab"
+    "revision": "4b22e23908f1fbef570ddc4e2e6f79c3"
   },
   {
     "url": "medium/vuejs/2017/10/11/lets-store-some-data-in-a-vue.html",
-    "revision": "3dee475c0bfd9cd7c7bd10f0b7f8a32e"
+    "revision": "c652c9787f437fd73f7d09b0a112b168"
   },
   {
     "url": "medium/webpack/css/javascript/2017/11/29/lets-webpack-encore.html",
-    "revision": "7f56b0a084732e505533c3f174416426"
+    "revision": "b8443ab991dc96f9a9a534fe1a24a299"
   },
   {
     "url": "projects/10k-2016.html",
@@ -491,7 +515,7 @@ self.__precacheManifest = [
   },
   {
     "url": "service-worker.js",
-    "revision": "b752dd2f19a38195fb9dac53adebe0d3"
+    "revision": "98a40984b511dcc103980c093e931eb2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
