@@ -20,11 +20,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/build/images/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "e788790e531300c12da1",
+    "revision": "ce26e92e6226b28af2ef",
     "url": "/build/main.css"
   },
   {
-    "revision": "e788790e531300c12da1",
+    "revision": "ce26e92e6226b28af2ef",
     "url": "/build/main.js"
   },
   {

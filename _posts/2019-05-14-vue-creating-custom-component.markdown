@@ -3,7 +3,7 @@ layout: post
 title: "Vue, creating custom component"
 date: 2019-05-14 21:17:01 +0200
 intro: We have already started making a vue app. Now let's go and try and make a custom component using vuejs. It could be useful they said.
-categories: medium vue vue-plugin
+categories: medium vuejs vue-plugin
 image: /img/headers/photo-1543966888-7c1dc482a810.jpg
 unsplash-url: https://unsplash.com/photos/oZMUrWFHOB4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Paul Esch-Laurent
