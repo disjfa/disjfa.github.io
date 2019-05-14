@@ -11,8 +11,6 @@ unsplash-user: Paul Esch-Laurent
 
 We have already started making a vue app. Now let's go and try and make a custom component using vuejs. It could be useful they said.
 
-## Img
-
 Now just to get started. Most of the issues and items we are discussing today i learned in a talk about vue. You can checkout the talk here.
 
 <div class="embed-responsive embed-responsive-16by9">
