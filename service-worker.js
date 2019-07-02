@@ -355,7 +355,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "52cf4654f6bbde6e2156887d62f5d486"
+    "revision": "98d8b7b574c926ac89b0e0eb4f9bb29e"
   },
   {
     "url": "javascript/2019/07/02/share.html",
