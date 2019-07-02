@@ -15,15 +15,22 @@ layout: sidebar
         {% if intro %}
             {% assign intro = false %}
         {% endif %}
-        <a href="{{ p.url }}" class="project">
+        <div class="project">
             <div class="project-image faded">
-                <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
+                <a href="{{ p.url }}">
+                    <img src="{{ p.image | prepend: site.baseurl }}" alt="{{ p.title }}" class="img-thumbnail">
+                </a>
             </div>
             <div class="project-body">
                 <h3>{{ p.title }}</h3>
+                {% include categories.html categories=p.categories %}
                 <p>{{ p.lead }}</p>
+                <a href="{{ p.url }}" class="btn btn-outline-primary">
+                    <i class="fa fa-angle-double-right"></i>
+                    Read more
+                </a>
             </div>
-        </a>
+        </div>
         <hr>
     {% endif %}
 {% endfor %}
@@ -38,10 +45,20 @@ layout: sidebar
         {% if intro %}
             {% assign intro = false %}
         {% endif %}
-        <a href="{{ p.url }}" class="d-block">
-            <h3>{{ p.title }}</h3>
+        <div class="d-block">
+            <a href="{{ p.url }}">
+                {% if p.image %}
+                    <img src="{{ p.image }}" alt="" class="img-thumbnail mb-2">
+                {% endif %}
+                <h3>{{ p.title }}</h3>
+            </a>
+            {% include categories.html categories=p.categories %}
             <p>{{ p.intro }}</p>
-        </a>
+            <a href="{{ p.url }}" class="btn btn-outline-primary">
+                <i class="fa fa-angle-double-right"></i>
+                Read more
+            </a>
+        </div>
         <hr>
     {% endif %}
 {% endfor %}

@@ -14,7 +14,7 @@ title: Home
                     </a>
                     <div class="py-2">
                         <h3>{{ page.title }}</h3>
-                        {% include categories.html %}
+                        {% include categories.html categories=page.categories %}
                         <p>
                             {{ page.lead }}
                         </p>

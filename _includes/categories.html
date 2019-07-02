@@ -1,5 +1,5 @@
 <p>
-    {% for cat in page.categories %}
+    {% for cat in include.categories %}
         <a href="{{ "/category/" | append: cat | append: '.html' | prepend: site.baseurl }}" class="badge badge-light">
             {{ cat }}
         </a>

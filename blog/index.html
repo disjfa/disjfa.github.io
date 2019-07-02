@@ -10,12 +10,13 @@ title: Blog
 {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="d-block">
         {% if post.image %}
-            <img src="{{ post.image }}" alt="" class="img-fluid mb-2">
+            <img src="{{ post.image }}" alt="" class="img-thumbnail mb-2">
         {% endif %}
         <h4>
             {{ post.title }}
         </h4>
     </a>
+    {% include categories.html categories=post.categories %}
     <div>
         <small class="card-text text-muted">
             {{ post.date | date: "%b %-d, %Y" }}
@@ -23,6 +24,7 @@ title: Blog
     </div>
     <p>{{ post.intro }}</p>
     <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary">
+        <i class="fa fa-angle-double-right"></i>
         Read more
     </a>
     <hr>

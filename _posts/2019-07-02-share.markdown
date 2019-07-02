@@ -2,18 +2,18 @@
 layout: post
 title: "Share!"
 date: 2019-07-02 21:17:01 +0200
-intro: Checking out the share api in javascript
+intro: Checking out the share api in JavaScript
 categories: javascript
 image: /img/headers/photo-1527168027773-0cc890c4f42e.jpg
 unsplash-url: https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Kyle Glenn
 ---
 
-On the internet we share stuff, facebook, twitter, email, other socials, and so on. We use some links to custom share links and build it up ourselves. When i built some apps i also  share, usually there is a share functionality. Now what if we want to implement share on a simple way, lets see where we can go with it.
+On the internet we share stuff, Facebook, twitter, email, other socials, and so on. We use some links to custom share links and build it up ourselves. When i built some apps i also  share, usually there is a share functionality. Now what if we want to implement share on a simple way, lets see where we can go with it.
 
 ### Share api.
 
-As usual, the people of the internet have thought of this already. When i searched for a share api there is one, offcourse. The [Navigator.share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) api. Awesome.
+As usual, the people of the internet have thought of this already. When i searched for a share api there is one, off course. The [Navigator.share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) api. Awesome.
 
 This sets us up to share the link using the default share slider you see on phones, where you only have the share types you have set up on your phone or device. Useful and clean! 
 
@@ -27,7 +27,7 @@ Next up, a simple implementation. Next we need a button on a page.
 </a>
 ```
 
-Cool, share button using some font awesome share icon! Lets add some javascript.
+Cool, share button using some font awesome share icon! Lets add some JavaScript.
 
 ```javascript
 document.addEventListener('click', (evt) => {
@@ -56,17 +56,17 @@ And run the code! I was on a desktop and clicked frantically to see how it all w
 
 ### Can we use that!
 
-So the next step was to ask the internet if we could use that. [Can i use web share api](https://caniuse.com/#feat=web-share). The anser is no, not yet. Not as built in out of the box. As i said earlier, the share api uses the share dialog as used on phones. And the diagram on [caniuse.com](https://caniuse.com) shows mobile browsers only at this point. I read somewhere that macos may be implementing something some time. But not yet. So should we use this, YES!
+So the next step was to ask the internet if we could use that. [Can i use web share api](https://caniuse.com/#feat=web-share). The answer is no, not yet. Not as built in out of the box. As i said earlier, the share api uses the share dialog as used on phones. And the diagram on [caniuse.com](https://caniuse.com) shows mobile browsers only at this point. I read somewhere that macos may be implementing something some time. But not yet. So should we use this, YES!
 
-### Lets polyfill.  
+### Lets poly fill.  
 
-Asking the internet some more i found out more people wanted to implement this. So i stumbled upon the [share-api-polyfill](https://github.com/NascHQ/share-api-polyfill). This will add a fallback as we are used on desktops, and implements the same structure as above. So just import the javascript to your site and you are good to go.
+Asking the internet some more i found out more people wanted to implement this. So i stumbled upon the [share-api-polyfill](https://github.com/NascHQ/share-api-polyfill). This will add a fallback as we are used on desktops, and implements the same structure as above. So just import the JavaScript to your site and you are good to go.
 
 ```html
 <script src="https://unpkg.com/share-api-polyfill/dist/share-min.js"></script>
 ```
 
-Or install using npm and build it in your javascript.
+Or install using npm and build it in your JavaScript.
 
 ```yaml
 npm install share-api-polyfill --save
@@ -74,11 +74,11 @@ npm install share-api-polyfill --save
 
 ### Done!
 
-Nice! Now we have a functionality that gives every type of browsing your app a nice way to share. And while the browsers will implement the api sharing will be nicer than ever. In the share polyfill you can also set up some stuff, for your own leisure.
+Nice! Now we have a functionality that gives every type of browsing your app a nice way to share. And while the browsers will implement the api sharing will be nicer than ever. In the share poly fill you can also set up some stuff, for your own leisure.
 
 ### Next up
 
-Next up. As on the example of the polyfill the share api returns a promise. So you can also extend it to add more to the share functionality. Thank the person that shares or log in your data collection efforts.
+Next up. As on the example of the poly fill the share api returns a promise. So you can also extend it to add more to the share functionality. Thank the person that shares or log in your data collection efforts.
 
 ```javascript
 navigator.share({
