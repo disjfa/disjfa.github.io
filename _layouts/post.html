@@ -3,5 +3,8 @@ layout: sidebar
 ---
 
 <h1>{{ page.title }}</h1>
+<a href="#" class="pull-right btn btn-outline-secondary js-share" data-title="{{ page.title }}" data-text="{{ page.intro }}" aria-label="Share this page">
+    <i class="fa fa-share-alt"></i>
+</a>
 {% include categories.html %}
 {{ content }}

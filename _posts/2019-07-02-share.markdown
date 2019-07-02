@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Share!"
+date: 2019-07-02 21:17:01 +0200
+intro: Checking out the share api in javascript
+categories: javascript
+image: /img/headers/photo-1527168027773-0cc890c4f42e.jpg
+unsplash-url: https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+unsplash-user: Kyle Glenn
+---
+
+On the internet we share stuff, facebook, twitter, email, other socials, and so on. We use some links to custom share links and build it up ourselves. When i built some apps i also  share, usually there is a share functionality. Now what if we want to implement share on a simple way, lets see where we can go with it.
+
+### Share api.
+
+As usual, the people of the internet have thought of this already. When i searched for a share api there is one, offcourse. The [Navigator.share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) api. Awesome.
+
+This sets us up to share the link using the default share slider you see on phones, where you only have the share types you have set up on your phone or device. Useful and clean! 
+
+### Lets implement.
+
+Next up, a simple implementation. Next we need a button on a page.
+
+```html
+<a href="#" class="btn btn-outline-secondary js-share" data-title="This is a title" data-text="This is a text" aria-label="Share this page">
+    <i class="fa fa-share-alt"></i>
+</a>
+```
+
+Cool, share button using some font awesome share icon! Lets add some javascript.
+
+```javascript
+document.addEventListener('click', (evt) => {
+  const share = evt.target.closest('.js-share');
+  if (!share) {
+    return;
+  }
+
+  if (!share.dataset.title) {
+    return;
+  }
+
+  navigator.share({
+    title: share.dataset.title,
+    text: share.dataset.text,
+    url: share.dataset.url || location.href
+  });
+
+  evt.preventDefault();
+});
+```
+
+Made a default click listener that listens to a `.js-share` class that should be clicked. Note that this uses a `.closest` function that can be pesky. More explanations and where i learned about this can be found [here on Chris Ferdinandi's site](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/).
+
+And run the code! I was on a desktop and clicked frantically to see how it all worked. But it did little. Sad.
+
+### Can we use that!
+
+So the next step was to ask the internet if we could use that. [Can i use web share api](https://caniuse.com/#feat=web-share). The anser is no, not yet. Not as built in out of the box. As i said earlier, the share api uses the share dialog as used on phones. And the diagram on [caniuse.com](https://caniuse.com) shows mobile browsers only at this point. I read somewhere that macos may be implementing something some time. But not yet. So should we use this, YES!
+
+### Lets polyfill.  
+
+Asking the internet some more i found out more people wanted to implement this. So i stumbled upon the [share-api-polyfill](https://github.com/NascHQ/share-api-polyfill). This will add a fallback as we are used on desktops, and implements the same structure as above. So just import the javascript to your site and you are good to go.
+
+```html
+<script src="https://unpkg.com/share-api-polyfill/dist/share-min.js"></script>
+```
+
+Or install using npm and build it in your javascript.
+
+```yaml
+npm install share-api-polyfill --save
+```
+
+### Done!
+
+Nice! Now we have a functionality that gives every type of browsing your app a nice way to share. And while the browsers will implement the api sharing will be nicer than ever. In the share polyfill you can also set up some stuff, for your own leisure.
+
+### Next up
+
+Next up. As on the example of the polyfill the share api returns a promise. So you can also extend it to add more to the share functionality. Thank the person that shares or log in your data collection efforts.
+
+```javascript
+navigator.share({
+    ...
+})
+.then( _ => console.log('Yay, you shared it :)'))
+.catch( error => console.log('Oh noh! You couldn\'t share it! :\'(\n', error));
+```
+
+Google is also on a way of sharing files this way, you can check that out on the [Share files with Web Share](https://developers.google.com/web/updates/2019/05/web-share-files) post on googles page. Could be awesome to share a file to a image editing website as an idea!
+
+Next up is whatever we want it to be.
+
+Enjoy!
