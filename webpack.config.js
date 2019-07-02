@@ -11,7 +11,7 @@ Encore
   .enableSingleRuntimeChunk()
   .addPlugin(new GenerateSW({
     globDirectory: './_site',
-    globPatterns: ['**/*.{html,js,css,jpg,png,woff2,woff,ttf}'],
+    globPatterns: ['**/*.{html,jpg,png}'],
     swDest: './../service-worker.js',
   }))
 ;
