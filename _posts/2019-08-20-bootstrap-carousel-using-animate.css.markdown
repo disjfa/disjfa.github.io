@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bootstrap carousel using animate.css"
+title: "Bootstrap carousel using Animate.css"
 date: 2019-08-20 23:17:01 +0200
 intro: Adding some Animate.css to a bootstrap carousel
 categories: bootstrap css
