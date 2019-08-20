@@ -294,6 +294,10 @@ self.__precacheManifest = [
     "revision": "c58844405da2526de8ddf97609f77793"
   },
   {
+    "url": "img/headers/photo-1556779914-c46d00d4d8de.jpg",
+    "revision": "12478aa6efb44dc7d5867f196bf4d4fc"
+  },
+  {
     "url": "img/headers/yingpis-kalayom-133680.jpg",
     "revision": "99041e2aa1ec50ecd3286eef8dd4281c"
   },

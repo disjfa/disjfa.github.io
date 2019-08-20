@@ -50,3 +50,4 @@ exclude:
   - README.md
   - webpack.config.js
   - gulpfile.js
+  - .idea
