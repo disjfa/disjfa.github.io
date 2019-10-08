@@ -16,6 +16,7 @@ related_project_keys: ["category", "technology"]
 related_min_common: 0.7
 
 google_analytics: UA-83598448-1
+github_url: https://github.com/disjfa/disjfa.github.io
 
 paginate: 15
 paginate_path: "/blog/page:num/"
