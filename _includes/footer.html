@@ -1,9 +1,14 @@
 <footer role="contentinfo">
     <div class="container">
+        <hr>
         <div class="row">
             <div class="col-12">
-                <hr>
                 <p class="text-right">
+                    <a href="#" class="js-share" data-title="{{ page.title }}" data-text="{{ page.intro }}" aria-label="Share this page">
+                        <i class="fa fa-share-alt"></i>
+                        Share
+                    </a>
+                    |
                     subscribe
                     <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
                         <i class="fa fa-rss"></i>
