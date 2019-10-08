@@ -2,13 +2,70 @@
 layout: default
 group: main
 title: Home
+image: img/headers/photo-1562447574-797880741dd1.jpg
 ---
 
-<div class="container pt-2">
+<div class="ryoko" style="background-image: url({{ page.image | prepend: site.baseurl }})">
+    <div class="ryoko-shade ryoko-body">
+        <div class="ryoko-faded text-white p-3 my-3">
+            <h3>{{ site.title }}</h3>
+        </div>
+    </div>
+</div>
+
+<div class="container py-3">
+    <h3>
+        <i class="fa fa-fw fa-newspaper-o"></i>
+        Blog
+    </h3>
+    <div class="row">
+        {% for post in site.posts limit:3 %}
+            <div class="col-12 col-lg-4 py-2">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="d-block">
+                    {% if post.image %}
+                        <img src="{{ post.image }}" alt="" class="img-thumbnail mb-2">
+                    {% endif %}
+                    <h4>
+                        {{ post.title }}
+                    </h4>
+                </a>
+                {% include categories.html categories=post.categories %}
+                <div>
+                    <small class="card-text text-muted">
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    </small>
+                </div>
+                <p>{{ post.intro }}</p>
+                <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-primary">
+                    <i class="fa fa-angle-double-right"></i>
+                    Read more
+                </a>
+            </div>
+        {% endfor %}
+        <div class="col-12">
+            <a href="{{ '/blog/index.html' | prepend: site.baseurl }}" class="btn btn-primary">
+                <i class="fa fa-fw fa-newspaper-o"></i>
+                More blog items
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <div class="container py-3">
+        <img src="{{ 'img/undraw_welcoming_xvuq.svg' | prepend: site.baseurl }}" alt="" class="img-fluid">
+    </div>
+</div>
+
+<div class="container py-3">
+    <h3>
+        <i class="fa fa-fw fa-cubes"></i>
+        Projects
+    </h3>
     <div class="row">
         {% for page in site.pages %}
-            {% if page.title and page.group == 'projects' %}
-                <div class="col-12 col-xl-4 col-md-6 py-2">
+            {% if page.title and page.group == 'projects' and page.featured %}
+                <div class="col-12 col-lg-4 py-2">
                     <a href="{{ page.url }}" aria-label="Read more about {{ page.title }}" class="faded">
                         <img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
                     </a>
@@ -26,6 +83,21 @@ title: Home
                 </div>
             {% endif %}
         {% endfor %}
+        <div class="col-12">
+            <a href="{{ '/projects/index.html' | prepend: site.baseurl }}" class="btn btn-primary">
+                <i class="fa fa-fw fa-cubes"></i>
+                All Projects
+            </a>
+        </div>
     </div>
 </div>
 
+<div style="background: #2c3e50">
+    <div class="container py-3">
+        <h3>
+            <i class="fa fa-fw fa-tags"></i>
+            Categories
+        </h3>
+        {% include site-categories.html %}
+    </div>
+</div>

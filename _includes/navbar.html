@@ -8,15 +8,21 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item{% if '/blog.html' == page.url %} active{% endif %}">
                     <a href="{{ '/blog/index.html' | prepend: site.baseurl }}" class="nav-link">
+                        <i class="fa fa-fw fa-newspaper-o"></i>
                         Blog
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="projects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="{{ '/projects/index.html' | prepend: site.baseurl }}" id="projects" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-cubes"></i>
                         Projects
                     </a>
                     <div class="dropdown-menu" aria-labelledby="projects">
                         {% include dropdown.html group='projects' %}
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ '/projects/index.html' | prepend: site.baseurl }}">
+                            All Projects
+                        </a>
                     </div>
                 </li>
             </ul>
