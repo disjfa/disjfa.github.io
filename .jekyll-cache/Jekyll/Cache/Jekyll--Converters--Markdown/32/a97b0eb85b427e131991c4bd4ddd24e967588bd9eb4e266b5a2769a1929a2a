@@ -1,0 +1,228 @@
+I"K<p><a href="https://symfony.com/">Symfony</a>, a set of reusable PHP components, has the auto wire feature for a while now. Lets dive into that. Let’s auto wire a hello world service.</p>
+
+<p>Since symfony 4 they have set up a basic <a href="https://github.com/symfony/skeleton">skeleton</a> framework, this is so we do not need a “big” setup using <a href="https://symfony.com/doc/current/doctrine.html">doctrine</a> for a database, <a href="https://symfony.com/doc/current/templating.html">twig</a> for a template engine, and such. If you do you want the old setup you can check the <a href="https://github.com/symfony/website-skeleton">website-skeleton</a>.</p>
+
+<h2 id="instalation">Instalation</h2>
+<p>Lets get started. Installation using composer.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">composer create-project symfony/skeleton my_project</span>
+</code></pre></div></div>
+<p>The composer create-project call will download the repo without the git data and put it in a new folder, and do a composer install. This is the message we get on the end of installation.</p>
+
+<h2 id="whats-next">What’s next?</h2>
+<p>Run your application:</p>
+<ol>
+  <li>Change to the project directory</li>
+  <li>Create your code repository with the git init command</li>
+  <li>Run composer require server –dev to install the development web server,
+ or configure another supported web server <a href="https://symfony.com/doc/current/setup/web_server_configuration.html">https://symfony.com/doc/current/setup/web_server_configuration.html</a></li>
+</ol>
+
+<p>A nice message, also a message about an internal server. We don’t have a server so we will use that for now.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">cd my_project</span>
+<span class="s">composer require server --dev</span>
+</code></pre></div></div>
+<p>Done, server installed. Les’t take a look at the thing we made.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">bin/console server:start</span>
+</code></pre></div></div>
+<p>It said the server started at port 8000, so we open <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>. Here we are greeted with a nice method symfony is installed.</p>
+
+<h2 id="auto-wiring">Auto wiring</h2>
+<p>Ok, the article was about auto wiring and until now we just installed a symfony project. So i have actually not said anything yet. Lets start auto wiring! What is auto wiring, it is “Defining Services Dependencies Automatically” as stated on the symfony page. Before auto wiring symfony had a need to manually configure all you classes in service definitions. Those would be in yaml, xml and php files. Usually a pain in the head, so they did something to make developing a little bit easier.</p>
+
+<p>If set up in a bundle or project symfony will scan all the files and cache all the file definitions in you app/bundle. In the skeleton project, check <code class="highlighter-rouge">config/services.yaml</code></p>
+
+<h2 id="config">Config</h2>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+    <span class="na">_defaults</span><span class="pi">:</span>
+        <span class="na">autowire</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">autoconfigure</span><span class="pi">:</span> <span class="no">true</span>
+
+    <span class="s">App\</span><span class="pi">:</span>
+        <span class="na">resource</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../src/*'</span>
+        <span class="na">exclude</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'</span>
+
+    <span class="s">App\Controller\</span><span class="pi">:</span>
+        <span class="na">resource</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../src/Controller'</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">controller.service_arguments'</span><span class="pi">]</span>
+</code></pre></div></div>
+<p>The main part is to add the _<code class="highlighter-rouge">defaults</code>: to autowire and autoconfigure. And we have to tell where the files are. In this example all the files in the App\ namespace, wich is set to your <code class="highlighter-rouge">src/</code> folder will be autowired and autoconfigured.</p>
+
+<p>In symfony we also have to tag some services, if this is wanted you can also auto tag all files in a folder. In this example all files in the <code class="highlighter-rouge">App\Controller\</code> namespace will be tagged as controllers. As they should.</p>
+
+<h2 id="next-thing">Next thing</h2>
+<p>As i am typing i realize i have just installed symfony and done nothing, so let’s divert again!</p>
+
+<h2 id="debugging">Debugging</h2>
+<p>You are wondering what services there are. Lets go back to the command line! Start typing;</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">bin/console debug:container</span>
+</code></pre></div></div>
+<p>This command will show you all the services already registered or auto wired. You can serach for an example by adding an argument</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">bin/console debug:container log</span>
+</code></pre></div></div>
+<p>This will list all the services that do things with logging. You can even check the details of all the services defined. Useful!</p>
+
+<h2 id="lets-start-auto-wiring">Lets start auto wiring</h2>
+<p>Finally, typing. Let’s make a HelloWorldService service in <code class="highlighter-rouge">src/Services/HelloWorldService.php</code>. We want to make a service and inject another. Because we just have a clean skeleton we can use the <code class="highlighter-rouge">RequestStack</code> to get the master request. In the service we check if we have a <code class="highlighter-rouge">who</code> in the query string and return that in a <code class="highlighter-rouge">Response</code>. Simple, useful for a hello world example.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="kn">namespace</span> <span class="nn">App\Services</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nn">Symfony\Component\HttpFoundation\RequestStack</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nn">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">HelloWorldService</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @param RequestStack $requestStack
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">(</span><span class="nx">RequestStack</span> <span class="nv">$requestStack</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span> <span class="o">=</span> <span class="nv">$requestStack</span><span class="o">-&gt;</span><span class="na">getMasterRequest</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cd">/**
+     * @return Response
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">sayWhat</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">has</span><span class="p">(</span><span class="s1">'who'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">'Hello '</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">request</span><span class="o">-&gt;</span><span class="na">query</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'who'</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Response</span><span class="p">(</span><span class="s1">'Hello world'</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Next, warm up the cache and search for the hello service in the container.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">bin/console cache:warmup</span>
+<span class="s">bin/console debug:container hello</span>
+</code></pre></div></div>
+<p>Now our service should show up in the list, when we select the service we get the information about the service.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">Information for Service "App\Services\HelloWorldService"</span>
+<span class="s">========================================================</span>
+<span class="s">---------------- --------------------------------</span>
+<span class="s">Option           Value</span>
+<span class="s">---------------- --------------------------------</span>
+<span class="s">Service ID       App\Services\HelloWorldService</span>
+<span class="s">Class            App\Services\HelloWorldService</span>
+<span class="s">Tags             -</span>
+<span class="s">Public           no</span>
+<span class="s">Synthetic        no</span>
+<span class="s">Lazy             no</span>
+<span class="s">Shared           yes</span>
+<span class="s">Abstract         no</span>
+<span class="s">Autowired        yes</span>
+<span class="s">Autoconfigured   yes</span>
+<span class="s">---------------- --------------------------------</span>
+</code></pre></div></div>
+
+<h2 id="information">Information</h2>
+<p>So we made a service, it is registered. Most of the key in the list are hard to explain, or i just don’t know everything. One item I wan’t to say. <code class="highlighter-rouge">Public</code>. In good olden days we called services from the Container classes. Those services were public. In a controller we would type something like this;</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nv">$service</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'App\Services\HelloWorldService'</span><span class="p">);</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<h2 id="side-step-again">Side step again</h2>
+<p>As a <a href="https://symfony.com/doc/current/service_container.html#public-versus-private-services">best practice</a> you should not register you services as public. And since we want to autowire our new services anyway we won’t need to. We autowire.</p>
+
+<h2 id="controller">Controller</h2>
+<p>Let’s change that welcome to symfony page, add a controller. I named it <code class="highlighter-rouge">HelloWorldController</code>. Add this controller in a file named <code class="highlighter-rouge">src/Controller/HelloWorldController.php</code>.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="kn">namespace</span> <span class="nn">App\Controller</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nn">App\Services\HelloWorldService</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nn">Symfony\Bundle\FrameworkBundle\Controller\AbstractController</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nn">Symfony\Component\HttpFoundation\Response</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">HelloWorldController</span> <span class="k">extends</span> <span class="nx">AbstractController</span>
+<span class="p">{</span>
+    <span class="cd">/**
+     * @param HelloWorldService $helloWorldService
+     * @return Response
+     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nx">HelloWorldService</span> <span class="nv">$helloWorldService</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$helloWorldService</span><span class="o">-&gt;</span><span class="na">sayWhat</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>As we see here we just inject the service in the index, and it will return a response from the <code class="highlighter-rouge">sayWhat</code> function.</p>
+
+<h2 id="route">Route</h2>
+<p>Route to the controller, in <code class="highlighter-rouge">config/routes.yaml</code> add the following, since <a href="https://symfony.com/doc/current/routing.html">annotations</a> for routes is not yet installed.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">index</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+    <span class="na">controller</span><span class="pi">:</span> <span class="s">App\Controller\HelloWorldController::index</span>
+</code></pre></div></div>
+
+<p>Clear the cache and get to the localhost. On the localhost we should see a nice hello world. Also as seen in our service when we add a who to the query params we should see a new response. When we go to http://127.0.0.1:8000/?who=moon we should see a nice “Hello moon” message.</p>
+
+<h2 id="and-done">And done!</h2>
+<p>We made a service, injected a router stack into the service. Next we used the service in a controller and let the service create a response! Looks like a lot for a string in my browser but it sets up the basics. Next just go make a larger app and start injecting the <code class="highlighter-rouge">EntityManagerInterface</code> to do doctrine stuff or <code class="highlighter-rouge">TranslatorInterface</code> to translate stuff or services from bundles you make or like to use!</p>
+
+<h2 id="aliasses">Aliasses</h2>
+<p>When you want to auto wire services from bundles who have not setup the bundle using the autowire setup you can still use them. As an example i want to inject a FilterService from the liip_imagine bundle. They set that up as a ‘@liip_imagine.service.filter’ service id (service id, check the <code class="highlighter-rouge">debug:controller</code>). You can just set up an alias in a *.yaml service.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+    <span class="s">Liip\ImagineBundle\Service\FilterService</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@liip_imagine.service.filter'</span>
+</code></pre></div></div>
+
+<p>So now it re-auto wires the FilterService to the original service name.</p>
+
+<h2 id="_instance">_instance</h2>
+<p>If you want to auto wire or auto tag a service, you can set it up in a <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#interface-based-service-configuration">_instanceof service configuration</a>;</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># app/config/services.yml</span>
+<span class="na">services</span><span class="pi">:</span>
+    <span class="na">_instanceof</span><span class="pi">:</span>
+        <span class="na">Twig_ExtensionInterface</span><span class="pi">:</span>
+            <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">twig.extension'</span><span class="pi">]</span>
+</code></pre></div></div>
+
+<p>This will auto tag all Twig extensions as a twig extensions (more examples in the link).</p>
+
+<h2 id="bundles">Bundles</h2>
+<p>If you have a bundle you have to explain to symfony you use autowire again. And the setup is exactly the same, except for two more <code class="highlighter-rouge">../</code> dots. In your <code class="highlighter-rouge">Resources/config/services.yaml</code> you have to tell symfony again to check.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+    <span class="na">_defaults</span><span class="pi">:</span>
+        <span class="na">autowire</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">autoconfigure</span><span class="pi">:</span> <span class="no">false</span>
+
+    <span class="s">Acme\MyBundle\</span><span class="pi">:</span>
+        <span class="na">resource</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../../*'</span>
+        <span class="na">exclude</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../../{Entity,Migrations,Tests}'</span>
+
+    <span class="s">Acme\MyBundle\Controller\</span><span class="pi">:</span>
+        <span class="na">resource</span><span class="pi">:</span> <span class="s1">'</span><span class="s">../../Controller'</span>
+        <span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="s1">'</span><span class="s">controller.service_arguments'</span><span class="pi">]</span>
+<span class="nn">...</span>
+</code></pre></div></div>
+<p>And so on. But don’t forget to add this to the bundle, and enjoy. Also you can add the autowire on a specific service declaration so symfony will check the class arguments.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">services</span><span class="pi">:</span>
+    <span class="s">Acme\MyBundle\Service\MyService</span><span class="pi">:</span>
+        <span class="na">autowire</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>This will just add the auto wiring to a specific service when the _defaults is not set. Handy in some projects.</p>
+
+<h2 id="and-done-again">And done again!</h2>
+<p>Explained it, at least i hope. Add some exceptions. Added some examples. Hope i wrote it in a way people can understand and start auto wiring all the services! And enjoy!</p>
+
+:ET

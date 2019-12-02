@@ -1,0 +1,131 @@
+I";8<p>We have already started making a vue app. Now let’s go and try and make a custom component using vuejs. It could be useful they said.</p>
+
+<p>Now just to get started. Most of the issues and items we are discussing today i learned in a talk about vue. You can checkout the talk here.</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WH_zrZpMtCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="the-goal">The goal</h3>
+
+<p>The goal of today is that we create a full component that can be reused by anyone. Such a wonderful thing of just making a piece of script anyone can include in a vue project. Using a build script or just include some js from the internet. The result i have is a minesweeper clone. You can check it out on my <a href="https://codepen.io/disjfa/pen/axdmob">codepen</a> or <a href="https://vue-minesweeper.js.org/">demo site</a>, also <a href="https://github.com/disjfa/vue-minesweeper">github</a>. So as a demo this is what we end up with when we have all external javascript.</p>
+
+<h3 id="example">Example</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/vue-minesweeper"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+<p>Add some html</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;minesweeper-game&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>And a piece of javascript</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">();</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">$mount</span><span class="p">(</span><span class="dl">"</span><span class="s2">#app</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="seems-simple-enough">Seems simple enough!</h3>
+
+<p>So cool, let’s get this thing started. First of we need a project, we use <a href="https://cli.vuejs.org/">vue cli</a> as we should! Just go through the steps as you know.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">vue create my-project</span>
+</code></pre></div></div>
+
+<p>Cool, a project. Next we move the <code class="highlighter-rouge">src</code> folder to a docs folder, we like docs. We use the setup as they should but on another folder. Next up we need to tell npm to do just that so we change the scripts in the <code class="highlighter-rouge">package.json</code>.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vue-cli-service build --target lib --name VueMyProject src/index.js"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"build:docs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vue-cli-service build ./docs/main"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"serve"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vue-cli-service serve ./docs/main"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To check, the new <code class="highlighter-rouge">build</code> script is linked to the <code class="highlighter-rouge">src</code> folder, als it should. But now we also add the <code class="highlighter-rouge">--target lib</code> and the <code class="highlighter-rouge">--name VueMyProject</code>. This is to say we want to eventually need to build the project as a library, with the name <code class="highlighter-rouge">VueMyProject </code>.</p>
+
+<p>The <code class="highlighter-rouge">build:docs</code> command builds the docs. The docs we use and abuse for testing the new component. Also we need to serve the files for local development. Useful!</p>
+
+<p>Before we start, we are gonna add a new <code class="highlighter-rouge">src</code> folder and a <code class="highlighter-rouge">src/index.js</code> main file. This is the start point of the component we are building. As we are making components also add a component in <code class="highlighter-rouge">src/components/MyComponent.vue</code>. This can be a basic component, you know how to get that started. Code!</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">MyComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/MyComponent.vue</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">install</span><span class="p">(</span><span class="nx">Vue</span><span class="p">,</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="p">{</span>
+  <span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="nx">MyComponent</span><span class="p">,</span> <span class="nx">MyComponent</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nb">window</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span>
+  <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Vue</span>
+  <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">Vue</span> <span class="o">===</span> <span class="nx">Vue</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="nx">install</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">Vue</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">install</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="digest">Digest</h3>
+
+<p>We import <code class="highlighter-rouge">Vue</code> from <code class="highlighter-rouge">'vue'</code>, we import the component we just built. Add a install function. Add a check if there is a <code class="highlighter-rouge">window</code>, this is for the check when we just include the script as a script on the page. It will automatically install the component when Vue is defined on the <code class="highlighter-rouge">window</code> aka browser. Last part is to export the install function to be used when we “build” a vue project and we do not have a global vue component yet.</p>
+
+<h3 id="digest-some-more">Digest some more</h3>
+
+<p>Vue on window,  project what not. What are we going on about. The first example is how we “installed” the component as above, in the example earlier. Next one is when we have the component on npm as example and we can import it in our project. Just like any other component in vue, example.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span><span class="p">;</span>
+<span class="p">...</span>
+<span class="k">import</span> <span class="nx">MyComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">my-component</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">...</span>
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>This import is useful, we can use that in our docs. But our docs won’t use the final component, we want to test and build the component. So we change that statement like this</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">MyComponent</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../scr</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>We just load the component from the src folder. This so we can use, play around and test the component. Awesome! Now we can just make, test and add on the component as we want. But the component is seperate from the docs. So we have a build for the docs, and for the “main” script. Nice, no hassle of making custom docs or adding weird builds to test or make the thing. Just all in one location we can test.</p>
+
+<p>So now it is up to you to build your docs and test/add some test cases to show your awesome component. At the end you can deploy those files to your gh-pages branch or <a href="https://js.org/">js.org</a> like we did on the minesweeper component. More on their website about that!</p>
+
+<h3 id="fin">Fin!</h3>
+
+<p>This is basically the thing. But we won’t end here. We want a bit on the nitty gritty. Dig deeper, the video earlier did that. <code class="highlighter-rouge">package.json</code></p>
+
+<h3 id="peerdependencies">peerDependencies</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"peerDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"vue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.6.6"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>A way to get and set up dependencies is using <code class="highlighter-rouge">peerDependencies</code>. We know about <code class="highlighter-rouge">dependencies</code> and <code class="highlighter-rouge">devDependencies</code>. But a <code class="highlighter-rouge">peerDependencies</code>? This is checked when we only build a component but just want to mention that another one is needed. Like the example at the start, we include vue and then the component. If we would only include the latter we should get a mention that vue should be loaded also.</p>
+
+<h3 id="deploy-somewhere">Deploy somewhere</h3>
+
+<p>Next we like to deploy somewhere. Somewhere, anywhere. Let’s check <code class="highlighter-rouge">package.json</code>.</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist/VueMinesweeper.umd.js"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"browser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist/VueMinesweeper.common.js"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"unpkg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist/VueMinesweeper.umd.min.js"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"jsDelivr"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dist/VueMinesweeper.umd.min.js"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Main, the main file to be included when we added to the build scripts (<code class="highlighter-rouge">@import 'my-component'</code>) Browser, to be used as common js in the browser i suppose. Unpkg and jsDelivr, <a href="https://unpkg.com/">unpkg</a> and <a href="https://www.jsdelivr.com/">jsDelivr</a> are a website indexing and serving your npm modules for you, like a cdn but even more easier. In the first example I fetch vue from jsDeliver and my package from unpkg. So easy, just deploy you custom component and add you package name to the urls. So easy.</p>
+
+<h3 id="small-things">Small things</h3>
+
+<p>Components are awesome, but they have limitations. In a time i made a component using a <a href="https://vuex.vuejs.org/">vuex</a> store and a <a href="https://router.vuejs.org/">router</a>, but because a vuex store needs more setup, as does the router. So they cannot be “just” include in a plugin to be loaded from an external site. Well it could when we build up some more setup of add more bootstrap code. So be aware of what you like to build and keep those things in mind.</p>
+
+<h3 id="even-further">Even further</h3>
+
+<p>Yes, even more. There is lots more in the video above, small things to make life harder, like the <code class="highlighter-rouge">--report</code> flag on the build script. Check if your final package is actually as small as it could. Files in your <code class="highlighter-rouge">package.json</code> to only deploy files to npm that are actually needed. But i think i will just end things here.</p>
+
+<p>Just don’t forget to checkout my example and maybe play some <a href="https://vue-minesweeper.js.org/">minesweeper</a>.</p>
+
+:ET

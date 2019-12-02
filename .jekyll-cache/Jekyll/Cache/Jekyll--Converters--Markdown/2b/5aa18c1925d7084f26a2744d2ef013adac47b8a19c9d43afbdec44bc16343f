@@ -1,0 +1,2 @@
+I"ì<p>So i build websites and apps regularly, and i use build tools all the time. Once i started using <a href="https://gruntjs.com/">grunt</a> a long time ago i fell in love. But every project you had the hassle of setting up all the tasks you want. And the basics is just building javascript (using babel), uglyfying on production it and do the same on the css side of things. So much work, every time. Now comes <a href="https://symfony.com/doc/current/frontend.html">webpack encore</a>.</p>
+:ET

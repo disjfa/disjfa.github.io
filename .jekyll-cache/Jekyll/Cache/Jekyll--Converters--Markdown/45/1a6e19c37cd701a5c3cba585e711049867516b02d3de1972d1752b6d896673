@@ -1,0 +1,2 @@
+I"<p>Ok so symfony created a new <a href="https://symfony.com/doc/current/components/mime.html">mime</a> component to create emails, and a new <a href="https://symfony.com/doc/current/mailer.html">mailer</a> component to send those. Let’s bundle them up and see what we end up with!</p>
+:ET

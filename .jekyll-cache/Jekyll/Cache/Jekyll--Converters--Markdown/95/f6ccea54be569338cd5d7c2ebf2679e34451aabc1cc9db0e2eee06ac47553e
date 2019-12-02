@@ -1,0 +1,108 @@
+I"a'<p>Css grid, introduced ages ago in internet explorer 10 with their own rules is now probably in your browse. We want to get started with it and check how far we can go in browsers. And still thinking about some IE11 uses. They are there. You can check a full example of the finished example <a href="https://disjfa.github.io/bootstrap-tricks/grid-it/">here</a>.</p>
+
+<p>I once wrote a short story on <a href="https://medium.com/@disjfa/writing-an-admin-template-in-14-lines-of-css-using-bootstrap-786277da50a4">writing an admin template in just 14 lines of css</a>. Now i was reading about css grid and it sounds cool. So let’s redo that story, using css grid.</p>
+
+<h2 id="some-examples">Some examples</h2>
+<p>As a started using css grid there are a lot of sites helping you get started. <a href="https://gridbyexample.com/">Grid by Example</a> has useful examples. And off <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">course A Complete Guide to Grid</a> is useful.</p>
+
+<h2 id="admin-template">Admin template</h2>
+<p>I started with an admin template because it has some potential. So lets start typing. I started using a <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#article-header-id-14">grid-template-areas</a>. Built up my site and setup some positions on my grid.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100vw</span><span class="p">;</span>
+  <span class="na">grid-template-columns</span><span class="p">:</span> <span class="m">250px</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="na">grid-template-rows</span><span class="p">:</span> <span class="m">100px</span> <span class="nb">auto</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="na">grid-gap</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="na">grid-template-areas</span><span class="p">:</span> 
+    <span class="s2">"sidebar header"</span>
+    <span class="s2">"sidebar main"</span>
+    <span class="s2">"sidebar footer"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span> <span class="p">{</span>
+    <span class="na">grid-area</span><span class="p">:</span> <span class="n">sidebar</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">...</span>
+</code></pre></div></div>
+<p>Cool, setup a small grid. Full screen. Let’s go!</p>
+
+<h2 id="postcss-and-autoprefixer">Postcss and autoprefixer.</h2>
+<p>Next i found a story on <a href="https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/">CSS Grid in IE</a>. And installed the <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>. There you have to setup the autoprefixer to enable css grid support, easy. I added a postcss.config.js in my project with this;</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">autoprefixer</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">grid</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="you-need-to-test-every-fix-with-grid-in-ie">You need to test every fix with Grid in IE</h2>
+<p>One line of code on the autoprefixer page told me to test always on internet explorer first, so i did. And it broke a bit. I don’t know why, but it broke. It did not take my width and height. It got worse when i started adding responsive media queries. Some things did not load or just exploded on IE. Let’s go back to the drawing board.</p>
+
+<p>I don’t know what i did wrong or where i could fix this, i could probably fix it somewhere but i couldn’t find where. So i went back to the drawing board.</p>
+
+<p>I found a nice article on when and where i can <a href="https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/">try to use the IE implementation of CSS Grid Layout</a>. Some things should work with the autoprefixer but i just wanted to use tested properties.</p>
+
+<blockquote>
+  <p>You need to test every fix with Grid in IE</p>
+</blockquote>
+
+<h2 id="lets-get-started-again">Let’s get started, again</h2>
+<p>So i got started again, i do use bootstrap for some scss values. First up setup a fallback layout.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.grid</span> <span class="p">{</span>
+  <span class="nl">padding-left</span><span class="p">:</span> <span class="nv">$spacer</span><span class="p">;</span>
+  <span class="nl">padding-right</span><span class="p">:</span> <span class="nv">$spacer</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">1140px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now the template can be seen as in a mobile view as a fallback. Next up, setup a grid on a viewport of 768px width. Again, usings scss.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">screen</span> <span class="nf">and</span> <span class="p">(</span><span class="n">min-width</span><span class="o">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.grid</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+    <span class="na">grid-template-columns</span><span class="p">:</span> <span class="m">300px</span> <span class="m">10px</span> <span class="m">1fr</span><span class="p">;</span>
+    <span class="na">grid-template-rows</span><span class="p">:</span> <span class="n">min-content</span> <span class="m">10px</span> <span class="m">1fr</span> <span class="m">10px</span> <span class="n">min-content</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+    <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="k">&amp;</span><span class="nt">-sidebar</span><span class="o">,</span>
+    <span class="k">&amp;</span><span class="nt">-header</span><span class="o">,</span>
+    <span class="k">&amp;</span><span class="nt">-content</span> <span class="p">{</span>
+      <span class="nl">overflow</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nt">-sidebar</span> <span class="p">{</span>
+      <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+      <span class="nl">grid-row</span><span class="p">:</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nt">-header</span> <span class="p">{</span>
+      <span class="nl">grid-column</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+      <span class="nl">grid-row</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nt">-content</span> <span class="p">{</span>
+      <span class="nl">grid-column</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+      <span class="nl">grid-row</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">&amp;</span><span class="nt">-footer</span> <span class="p">{</span>
+      <span class="nl">grid-column</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+      <span class="nl">grid-row</span><span class="p">:</span> <span class="m">5</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Reset the grid, add some columns and rows. Setting up an admin like setup, placing the sidebar on the left and a header, content and footer on the right. Next up re-run on the internet explorer browser. And it actually works.</p>
+
+<h2 id="min-content">min-content</h2>
+<p>I was typing and testing the grid and it worked, but my header just would not fit and i found a nice property. Min-height. It will fit the content as it will just fit. Minimum height. Cool for usage, and still works on the older browsers.</p>
+
+<h2 id="example">Example</h2>
+<p>I have an example <a href="https://disjfa.github.io/bootstrap-tricks/grid-it/">here</a>. I also added a quick navigation trick for the navigation, it places itself on the bottom on smaller screens. The rest is as is.</p>
+
+<h2 id="use-it">Use it</h2>
+<p>As seen here, we can use this. And please do. I setup an admin interface, but you can use it for all the layouts in the world. Just start it up and set up in your project. It is supported in most browsers, just keep in mind to test it on your minimum browser you want to target. And enjoy making cool stuff.</p>
+:ET
