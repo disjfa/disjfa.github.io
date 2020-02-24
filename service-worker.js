@@ -31,11 +31,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "blog/index.html",
-    "revision": "c8f6bd0de71f5de1f78bb85cf1c19a29"
+    "revision": "c9feae75522e9b32a135ced689153199"
   },
   {
     "url": "blog/page2/index.html",
-    "revision": "91ceed58c71be765035d9f0464fdea5e"
+    "revision": "7c8275e854cd87db2faa213d43fd8d7d"
   },
   {
     "url": "bootstrap/css/2019/08/20/bootstrap-carousel-using-animate.css.html",
@@ -43,67 +43,67 @@ self.__precacheManifest = [
   },
   {
     "url": "category/bootstrap.html",
-    "revision": "ed2909c1eace22dfbab0f950c7285d34"
+    "revision": "8a3b5a323078dff841a0e9d0b088b7b9"
   },
   {
     "url": "category/codepen.html",
-    "revision": "93ad89736c26c89912059d87c5ec5234"
+    "revision": "b1902ccd51b4cf2faf6fa0315b517f26"
   },
   {
     "url": "category/css-component.html",
-    "revision": "6eb6a7e5d6c5fe3dc3a23f48d6ceaa28"
+    "revision": "fdfb956502248fb7e567d9d1f18e0c6f"
   },
   {
     "url": "category/css-template.html",
-    "revision": "1fb42301254dc0f547e7902ebe83f66b"
+    "revision": "abc36d2f57dbdd37ee2050fdb213f3b3"
   },
   {
     "url": "category/css.html",
-    "revision": "fbf30c88ca9e0d05d2947505c1fe8c13"
+    "revision": "854f68443e3a51592d3f94ae5a72f55c"
   },
   {
     "url": "category/github.html",
-    "revision": "198d09b119816c924a7ec8d10fde337a"
+    "revision": "b891156a22938cade633ac6f625dae9a"
   },
   {
     "url": "category/glynn-admin.html",
-    "revision": "f61188e2d3066250a2009cce61f7eae4"
+    "revision": "a3a6755f79927bb7b17b91dfcc93ea46"
   },
   {
     "url": "category/javascript.html",
-    "revision": "9f0ea64a9b49813a41d4589c1388c7a4"
+    "revision": "7d8473ab1d3597a4ac3143343b0e7737"
   },
   {
     "url": "category/medium.html",
-    "revision": "edbf666863b5c0f4917fec01e9b7cf95"
+    "revision": "b447907df12eec256fe4b699e18182da"
   },
   {
     "url": "category/php.html",
-    "revision": "fb2d3d29a157ddf71e1ad2882aec57b9"
+    "revision": "105edb9ddfcab12ad0d0bf04002cb65c"
   },
   {
     "url": "category/symfony.html",
-    "revision": "b2aa14fbcfed66389ba1faf6c93ad38d"
+    "revision": "6de612e22b6fba8325e2d4640e492991"
   },
   {
     "url": "category/vue-plugin.html",
-    "revision": "7e0694133e7f8e73b26a1fd993f1ae5c"
+    "revision": "217fbc04ee21b7116d582283b03e6176"
   },
   {
     "url": "category/vue-template.html",
-    "revision": "0aea7fd39a6f089d3f8d5a54039433a5"
+    "revision": "0826a4f2111fbd0243b4112c0967619f"
   },
   {
     "url": "category/vuejs.html",
-    "revision": "b4242e1cbb64f7302084f78aee895a95"
+    "revision": "5bb7293e6730f90cde43c6c6d898d4cf"
   },
   {
     "url": "category/webpack.html",
-    "revision": "c56450c99690fc92831e4cc52d41b589"
+    "revision": "4e8371fa17cdb52d98f6c1d78f54935d"
   },
   {
     "url": "category/wordpress.html",
-    "revision": "dab7268d896a5229f0ee2a6e7ccc6eff"
+    "revision": "fc862b1e59be9a8eb7e77f3ab4994a8f"
   },
   {
     "url": "css/codepen/2019/03/27/codepen-solutions.html",
@@ -395,7 +395,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "966919a50316a360131287375146633b"
+    "revision": "b9aee21de02ce2365870963a2f66f4bd"
   },
   {
     "url": "javascript/2019/07/02/share.html",
@@ -471,59 +471,59 @@ self.__precacheManifest = [
   },
   {
     "url": "projects/10k-2016.html",
-    "revision": "7b71c6afb53d56a4efb6b0dcd4affee3"
+    "revision": "411c654d6006e09a7a8df2facfc31b38"
   },
   {
     "url": "projects/bootstrap-tricks.html",
-    "revision": "a9ee328a6b6fed0fe2beb1bbca69f7ea"
+    "revision": "1af945e3b61b0c4aeddf762438d32029"
   },
   {
     "url": "projects/dimme-jour.html",
-    "revision": "9ff1ca122a473bfe6163d814835ec45c"
+    "revision": "7b55c7e5d16789e1a0f01b226c624d54"
   },
   {
     "url": "projects/fluent-bootstrap.html",
-    "revision": "8edd60ead5d9c92bde0466415dd3fc47"
+    "revision": "2c8d2c52f602a96bc2ba37f5d0354484"
   },
   {
     "url": "projects/glynn-admin-symfony.html",
-    "revision": "144c3ec469e7a5c310211d9dcf8226cc"
+    "revision": "8f3ea4f63ada3def4648b18172f47c3b"
   },
   {
     "url": "projects/glynn-admin.html",
-    "revision": "45de465b895d9ce084e407aa683ce3d9"
+    "revision": "19749cec304b73fc181eb9028411b367"
   },
   {
     "url": "projects/hella-hero.html",
-    "revision": "b6b92f4411b337deb81ae3fb6b6e57b8"
+    "revision": "b12ef459b6c421a6107b09b781d6b5ff"
   },
   {
     "url": "projects/index.html",
-    "revision": "6a862167394adb48c6e28efef0a80193"
+    "revision": "36646395f59e8b755f56fad6440abab0"
   },
   {
     "url": "projects/lyara-menu.html",
-    "revision": "85d1f2a64c9038f3d619e3bec58e6a4b"
+    "revision": "b29988d7b6d4ad313c535648b05e817a"
   },
   {
     "url": "projects/refero-list.html",
-    "revision": "f41a53ee9dae5d82aa6fd43cf914ef9e"
+    "revision": "1719e99d89535200f4632d1ae4730754"
   },
   {
     "url": "projects/ryoko-headers.html",
-    "revision": "03676cfb3fde4c5ca3073363b1d6e134"
+    "revision": "581e0aced1229da2e5f057014d52c19b"
   },
   {
     "url": "projects/vue-minesweeper.html",
-    "revision": "12692bdb57c7b868331ff54d4dd62ada"
+    "revision": "678ebcf578451020af0fba888283ff80"
   },
   {
     "url": "projects/vue-route-timeline.html",
-    "revision": "d8e5b97ab61a92c6179a2f0582b0f588"
+    "revision": "24d38199a05fbc153203cfa70e76b574"
   },
   {
     "url": "projects/vuetify-sidebar-template.html",
-    "revision": "f7355a3344e754d219797a971f060602"
+    "revision": "2d68ccc9d3cd09431658b544070e88d9"
   },
   {
     "url": "symfony/php/2019/12/02/mailing-with-symfony.html",
