@@ -30,7 +30,7 @@
     <link rel="manifest" href="{{ "/icon/manifest.json" | prepend: site.baseurl }}">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#020307">
-    <meta name="application-name" content="X-Brewing">
+    <meta name="application-name" content="{{ site.title }}">
     <meta name="msapplication-TileColor" content="#020307">
     <meta name="msapplication-TileImage" content="{{ "/icon/mstile-144x144.png" | prepend: site.baseurl }}">
     <meta name="msapplication-config" content="{{ "/icon/browserconfig.xml" | prepend: site.baseurl }}">
@@ -46,9 +46,9 @@
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{ "/icon/apple-touch-startup-image-1536x2008.png" | prepend: site.baseurl }}">
 
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-    <meta property="og:type" content="{% if page.type %}{{ page.type | escape }}{% else %}website{% endif %}">
+    <meta property="og:type" content="{{ page.type | default: 'website' | escape }}">
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:image" content="{{ page.image | default('/img/headers/photo-1562447574-797880741dd1.jpg') | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:image" content="{{ page.image | default: '/img/headers/photo-1562447574-797880741dd1.jpg' | prepend: site.baseurl | prepend: site.url }}">
     {% if page.intro %}
         <meta property="og:description" content="{{ page.intro }}">
     {% endif %}
