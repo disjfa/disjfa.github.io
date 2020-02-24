@@ -4,6 +4,7 @@ title: Animate with Intersection­Observer
 date: 2017-11-08 23:17:01 +0200
 intro: Animate your website using the Intersection ­Observer API 
 categories: medium javascript
+type: article
 image: /img/headers/kevin-364843.jpg
 unsplash-url: https://unsplash.com/photos/w7ZyuGYNpRQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Kevin

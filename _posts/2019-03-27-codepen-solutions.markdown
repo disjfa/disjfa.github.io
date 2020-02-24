@@ -4,6 +4,7 @@ title: "Codepen: solutions!"
 date: 2019-03-27 21:17:01 +0200
 intro: Made an example pen based on a drible
 categories: css codepen
+type: article
 image: /img/headers/header-codepen-solutions.jpg
 ---
 

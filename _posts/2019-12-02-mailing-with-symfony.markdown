@@ -4,6 +4,7 @@ title: "Mailing with symfony, what can we do!"
 date: 2019-12-02 23:17:01 +0200
 intro: Lets see what we can do with the new mime and mailer component
 categories: symfony php
+type: article
 image: /img/headers/photo-1466096115517-bceecbfb6fde.jpg
 unsplash-url: https://unsplash.com/@mathyaskurmann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Mathyas Kurmann

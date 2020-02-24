@@ -4,6 +4,7 @@ title: Let’s webpack… encore!
 date: 2017-11-29 23:17:01 +0200
 intro: So i build websites and apps regularly, and i use build tools all the time. Once i started using grunt a long time ago i fell in love. But every project you had the hassle of setting up all the tasks you want. And the basics is just building javascript (using babel), uglyfying on production it and do the same on the css side of things. So much work, every time. Now comes webpack encore.
 categories: medium webpack css javascript
+type: article
 image: /img/headers/ezra-jeffrey-77199.jpg
 unsplash-url: https://unsplash.com/photos/pPquxoraq_M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Ezra Jeffrey

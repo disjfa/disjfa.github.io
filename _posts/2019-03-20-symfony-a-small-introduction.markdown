@@ -4,6 +4,7 @@ title: "Symfony, a small introduction"
 date: 2019-02-26 23:17:01 +0200
 intro: Symfony, a set of reusable PHP components from a while back. Since a latest version of 4.0 they introduced a new way of setting up a app/website/api/component. A flex way using symfony flex. Lets take a small look at what to do with that!
 categories: medium php symfony
+type: article
 image: /img/headers/paul-esch-laurent-3442251.jpeg
 unsplash-url: https://unsplash.com/photos/zZlEcBxJ_Sw?utm_source=unsplash&utm_medium=referral&utm_content
 unsplash-user: Paul Esch-Laurent

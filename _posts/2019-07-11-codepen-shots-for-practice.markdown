@@ -4,6 +4,7 @@ title: "Codepen: Shots for Practice!"
 date: 2019-07-11 21:17:01 +0200
 intro: Made an example pen based on a drible
 categories: css codepen
+type: article
 image: /img/headers/header-codepen-shots-for-practice.jpg
 ---
 

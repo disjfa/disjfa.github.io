@@ -4,6 +4,7 @@ title: "Let’s get started on that pwa"
 date: 2018-08-07 23:17:01 +0200
 intro: Google made up a word, pwa. Progressive web app. And it is awesome. Create a web page and say it can be opened from an icon on your phone. Cool, now Apple will support the way they agreed upon. Microsoft even add’s the “apps” to the store when you have one. Let’s get you started!
 categories: medium javascript symfony
+type: article
 image: /img/headers/bruce-mars-xzQntuv9XUuA.jpeg
 unsplash-url: https://unsplash.com/photos/FWVMhUa_wbY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: bruce mars

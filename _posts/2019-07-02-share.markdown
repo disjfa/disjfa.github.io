@@ -4,6 +4,7 @@ title: "Share!"
 date: 2019-07-02 21:17:01 +0200
 intro: Checking out the share api in JavaScript
 categories: javascript
+type: article
 image: /img/headers/photo-1527168027773-0cc890c4f42e.jpg
 unsplash-url: https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Kyle Glenn

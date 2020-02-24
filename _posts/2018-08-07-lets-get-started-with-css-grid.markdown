@@ -4,6 +4,7 @@ title: "Lets get started with css grid"
 date: 2018-08-07 23:17:01 +0200
 intro: Css grid, introduced ages ago in internet explorer 10 with their own rules is now probably in your browse. We want to get started with it and check how far we can go in browsers. And still thinking about some IE11 uses. They are there. You can check a full example of the finished example.
 categories: medium css symfony
+type: article
 image: /img/headers/ruslan-bardash-6VASpxg.jpeg
 unsplash-url: https://unsplash.com/photos/Jqk3VXErDF0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Ruslan Bardash

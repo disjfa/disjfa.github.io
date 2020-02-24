@@ -4,6 +4,7 @@ title: "Symfony autowire, how to"
 date: 2018-12-13 23:17:01 +0200
 intro: Symfony, a set of reusable PHP components, has the auto wire feature for a while now. Lets dive into that. Let’s auto wire a hello world service.
 categories: medium php symfony
+type: article
 image: /img/headers/jose-miquel-FFN1sSX9ZZqw.jpeg
 unsplash-url: https://unsplash.com/photos/cNqwm1RB7Tw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: José Miguel

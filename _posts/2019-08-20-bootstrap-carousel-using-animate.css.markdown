@@ -4,6 +4,7 @@ title: "Bootstrap carousel using Animate.css"
 date: 2019-08-20 23:17:01 +0200
 intro: Adding some Animate.css to a bootstrap carousel
 categories: bootstrap css
+type: article
 image: /img/headers/photo-1556779914-c46d00d4d8de.jpg
 unsplash-url: https://unsplash.com/@ariel_aguerophoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Ariel_ Agüerophoto
