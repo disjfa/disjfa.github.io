@@ -1,0 +1,23 @@
+.ryoko {
+  background-color: $body-tertiary-bg;
+  background-position: center;
+  background-size: cover;
+  min-height: 15rem;
+  position: relative;
+}
+
+.ryoko-shade {
+  background-color: rgba(#000, .6);
+}
+
+.ryoko-body {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 15rem;
+  > .container {
+    margin: 0;
+  }
+}

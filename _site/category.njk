@@ -1,0 +1,71 @@
+---
+layout: layouts/sidebar.html
+tags:
+  - category-page
+pagination:
+  data: collections.categoryIndex
+  size: 1
+  alias: category
+permalink: "/category/{{ category.slug }}/index.html"
+eleventyComputed:
+  title: "Category: {{ category.title }}"
+  intro: "Browse posts in category {{ category.title }}"
+---
+
+<p>
+    <strong>{{ category.count }}</strong>
+    post{% if category.count != 1 %}s{% endif %} in this category.
+</p>
+<hr>
+
+{% set hasPosts = false %}
+{% for post in collections.posts %}
+    {% if post.data.tags and (category.key in post.data.tags) %}
+        {% set hasPosts = true %}
+        <div class="d-block mb-4">
+            <a href="{{ post.url }}">
+                {% if post.data.image %}
+                    <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2">
+                {% endif %}
+                <h3>{{ post.data.title }}</h3>
+            </a>
+            <p>{{ post.data.intro }}</p>
+            <a href="{{ post.url }}" class="btn btn-outline-primary">
+                <i class="fa fa-angle-double-right"></i>
+                Read more
+            </a>
+        </div>
+        <hr>
+    {% endif %}
+{% endfor %}
+
+{% if not hasPosts %}
+    <em>No posts found in this category.</em>
+{% endif %}
+
+<h3 class="mt-4">Projects</h3>
+<hr>
+{% set hasProjects = false %}
+{% for project in collections.projects %}
+    {% if project.data.categories and (category.key in project.data.categories) %}
+        {% set hasProjects = true %}
+        <div class="d-block mb-4">
+            <a href="{{ project.url }}">
+                {% if project.data.image %}
+                    <img src="{{ project.data.image }}" alt="" class="img-thumbnail mb-2">
+                {% endif %}
+                <h3>{{ project.data.title }}</h3>
+            </a>
+            <p>{{ project.data.intro }}</p>
+            <a href="{{ project.url }}" class="btn btn-outline-primary">
+                <i class="fa fa-angle-double-right"></i>
+                Read more
+            </a>
+        </div>
+        <hr>
+    {% endif %}
+{% endfor %}
+
+{% if not hasProjects %}
+    <em>No projects found in this category.</em>
+{% endif %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<main role="main">
+    {{ content | safe }}
+</main>
+
+</body>
+</html>

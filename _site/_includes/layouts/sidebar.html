@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include 'head.html' %}
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<main role="main">
+  {% if image %}
+  <div class="ryoko" style="background-image: url({{ image }})">
+    <div class="ryoko-shade ryoko-body">
+    </div>
+  </div>
+  {% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 my-3">
+        <h1>{{ title }}</h1>
+        <a href="#" class="pull-right btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="{{ intro }}" data-url="{{ page.url | url }}" aria-label="Share this page">
+          <i class="fa fa-share-alt"></i>
+        </a>
+        {{ content | safe }}
+        {% include 'unsplash.html' %}
+      </div>
+      <div class="col-md-4">
+        <div class="bg-dark py-3 px-3 my-3">
+          <h3>
+            <i class="fa fa-fw fa-tags"></i>
+            Categories
+          </h3>
+          <hr class="bg-light">
+          {% include 'site-categories.html' %}
+        </div>
+        <div class="bg-dark py-3 px-3 my-3">
+          <h3>
+            <i class="fa fa-fw fa-cubes"></i>
+            Projects
+          </h3>
+          <hr class="bg-light">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% include 'footer.html' %}
+</body>
+</html>

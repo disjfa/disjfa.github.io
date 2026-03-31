@@ -1,0 +1,75 @@
+---
+layout: layouts/sidebar.html
+title: Blog
+image: /img/headers/photo-1562447574-797880741dd1.jpg
+intro: All blog posts
+pagination:
+  data: collections.posts
+  size: 10
+  alias: posts
+permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---
+
+<div class="row">
+  {%- for post in posts -%}
+  <div class="col-12 py-2">
+    <div class="d-block mb-4">
+      <a href="{{ post.url }}">
+        {% if post.data.image %}
+        <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2">
+        {% endif %}
+        <h3>{{ post.data.title }}</h3>
+      </a>
+      <small class="text-muted">
+        <i class="fa fa-calendar"></i>
+        {{ post.date | postDate }}
+      </small>
+      <p>{{ post.data.intro }}</p>
+      <a href="{{ post.url }}" class="btn btn-outline-primary">
+        <i class="fa fa-angle-double-right"></i>
+        Read more
+      </a>
+    </div>
+    <hr>
+  </div>
+  {%- endfor -%}
+</div>
+
+{% if pagination.pages.length > 1 %}
+<nav aria-label="Blog pagination" class="my-4">
+  <ul class="pagination">
+    {% if pagination.previousPageHref %}
+    <li class="page-item">
+      <a href="{{ pagination.previousPageHref }}" class="page-link">
+        <i class="fa fa-chevron-left"></i>
+        Previous
+      </a>
+    </li>
+    {% endif %}
+
+    {% for pageEntry in pagination.pages %}
+    {% if loop.index0 == pagination.pageNumber %}
+    <li class="page-item active">
+      <span class="page-link">{{ loop.index }}</span>
+    </li>
+    {% else %}
+    <li class="page-item">
+      <a href="{{ pagination.hrefs[loop.index0] }}" class="page-link">
+        {{ loop.index }}
+      </a>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+    {% if pagination.nextPageHref %}
+    <li class="page-item">
+      <a href="{{ pagination.nextPageHref }}" class="page-link">
+        Next
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+

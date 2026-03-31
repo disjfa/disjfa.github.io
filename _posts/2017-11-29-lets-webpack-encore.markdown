@@ -25,7 +25,7 @@ Let’s go for broke, create a new folder and `npm init`. Hit ok on everything a
 npm install @symfony/webpack-encore
 ```
 
-Next, setup the complete and wholesome webpack.config.js file.
+Next, setup the complete and wholesome webpack.config.cjs file.
 
 ```js
 var Encore = require('@symfony/webpack-encore');
@@ -43,7 +43,7 @@ Encore
 module.exports = Encore.getWebpackConfig();
 ```
 
-The simple way to put this is, it builds the entire webpack.config.js for you.
+The simple way to put this is, it builds the entire webpack.config.cjs for you.
 
 Harder way is, it **sets the output path** of the files to a folder, we create, named **web/build**. The **public path** to use in javascript/css is /build. We **add an entry** named app, this uses the file we use as main javascript file. Like webpack uses. We are gonna **enable the sass loader**, i like sass. And just for kicks we **auto provide jQuery**. We **enable source maps** when we run not in production. And we **clean the output before build**, so the web/build folder gets emptied before scripts run.
 

@@ -1,17 +1,25 @@
-require('./../scss/main.scss');
+import '../scss/main.scss';
+import 'bootstrap';
 
-window.Popper = require('popper.js');
-require('bootstrap');
-require('share-api-polyfill');
-require('./components/closest');
-require('./components/share');
+document.querySelectorAll('.js-share').forEach((btn) => {
+  if (!navigator.share) {
+    btn.style.display = 'none';
+    return;
+  }
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js').then(registration => {
-      console.log('SW registered: ', registration);
-    }).catch(registrationError => {
-      console.log('SW registration failed: ', registrationError);
-    });
+  btn.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const title = btn.dataset.title || document.title;
+    const text = btn.dataset.text || '';
+    const url = btn.dataset.url || window.location.href;
+
+    try {
+      await navigator.share({ title, text, url });
+    } catch (err) {
+      if (err.name !== 'AbortError') {
+        console.warn('Share failed:', err);
+      }
+    }
   });
-}
+});
