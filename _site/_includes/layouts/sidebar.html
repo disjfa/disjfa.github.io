@@ -17,10 +17,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 my-3">
-        <h1>{{ title }}</h1>
-        <a href="#" class="pull-right btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="{{ intro }}" data-url="{{ page.url | url }}" aria-label="Share this page">
+        <a href="#" class="float-end btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="{{ intro }}" data-url="{{ page.url | url }}" aria-label="Share this page">
           <i class="fa fa-share-alt"></i>
         </a>
+        <h1>{{ title }}</h1>
+
+        {% if date %}
+          <p class="text-muted mb-2">
+            <small>{{ date | postDate }}</small>
+          </p>
+        {% endif %}
+        {% include 'categories.html' %}
         {{ content | safe }}
         {% include 'unsplash.html' %}
       </div>
@@ -39,6 +46,11 @@
             Projects
           </h3>
           <hr class="bg-light">
+          {% for project in collections.projects %}
+            <a class="d-block py-2" href="{{ project.url }}">
+              {{ project.data.title }}
+            </a>
+          {% endfor %}
         </div>
       </div>
     </div>

@@ -1,30 +1,24 @@
 ---
-layout: layouts/default.html
+layout: sidebar
 title: Projects
 ---
 
-<div class="container py-3">
-  <h1>
-    <i class="fa fa-fw fa-cubes"></i>
-    Projects
-  </h1>
-  <div class="row">
-    {% for project in collections.projects %}
-      <div class="col-12 col-xl-4 col-md-6 py-2">
-        <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="faded">
-          <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="img-fluid">
-        </a>
-        <div class="py-2">
-          <h3>{{ project.data.title }}</h3>
-          {% set categories = project.data.categories %}
-          {% include 'categories.html' %}
-          <p>{{ project.data.intro }}</p>
-          <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="btn btn-outline-primary">
-            <i class="fa fa-angle-double-right"></i>
-            Read more
-          </a>
-        </div>
-      </div>
-    {% endfor %}
+<div class="row">
+  {% for project in collections.projects %}
+  <div class="col-12 col-md-6 py-3 d-flex flex-column justify-content-between">
+    <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="faded">
+      <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="img-thumbnail">
+    </a>
+    <div class="py-2 flex-grow-1">
+      <h3>{{ project.data.title }}</h3>
+      <p>{{ project.data.intro }}</p>
+    </div>
+    <div>
+      <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="btn btn-outline-primary">
+        <i class="fa fa-angle-double-right"></i>
+        Read more
+      </a>
+    </div>
   </div>
+  {% endfor %}
 </div>

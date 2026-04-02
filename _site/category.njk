@@ -18,53 +18,61 @@ eleventyComputed:
 </p>
 <hr>
 
+<h3 class="mt-4">Blog</h3>
 {% set hasPosts = false %}
+<div class="row">
 {% for post in collections.posts %}
     {% if post.data.tags and (category.key in post.data.tags) %}
         {% set hasPosts = true %}
-        <div class="d-block mb-4">
-            <a href="{{ post.url }}">
+        <div class="col-12 col-md-6 py-3 d-flex flex-column justify-content-between">
+            <a href="{{ post.url }}" class="d-block">
                 {% if post.data.image %}
                     <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2">
                 {% endif %}
-                <h3>{{ post.data.title }}</h3>
+                <h4>{{ post.data.title }}</h4>
             </a>
-            <p>{{ post.data.intro }}</p>
-            <a href="{{ post.url }}" class="btn btn-outline-primary">
-                <i class="fa fa-angle-double-right"></i>
-                Read more
-            </a>
+            <p class="flex-grow-1">{{ post.data.intro }}</p>
+            <div>
+                <a href="{{ post.url }}" class="btn btn-outline-primary">
+                    <i class="fa fa-angle-double-right"></i>
+                    Read more
+                </a>
+            </div>
         </div>
-        <hr>
     {% endif %}
 {% endfor %}
+</div>
 
 {% if not hasPosts %}
     <em>No posts found in this category.</em>
 {% endif %}
 
 <h3 class="mt-4">Projects</h3>
-<hr>
 {% set hasProjects = false %}
+<div class="row">
 {% for project in collections.projects %}
-    {% if project.data.categories and (category.key in project.data.categories) %}
+    {% if project.data.tags and (category.key in project.data.tags) %}
         {% set hasProjects = true %}
-        <div class="d-block mb-4">
-            <a href="{{ project.url }}">
+        <div class="col-12 col-md-6 py-3 d-flex flex-column justify-content-between">
+            <a href="{{ project.url }}" class="d-block">
                 {% if project.data.image %}
                     <img src="{{ project.data.image }}" alt="" class="img-thumbnail mb-2">
                 {% endif %}
-                <h3>{{ project.data.title }}</h3>
+                <h4>{{ project.data.title }}</h4>
             </a>
-            <p>{{ project.data.intro }}</p>
-            <a href="{{ project.url }}" class="btn btn-outline-primary">
-                <i class="fa fa-angle-double-right"></i>
-                Read more
-            </a>
+            <div class="flex-grow-1">
+                <p>{{ project.data.intro }}</p>
+            </div>
+            <div>
+                <a href="{{ project.url }}" class="btn btn-outline-primary">
+                    <i class="fa fa-angle-double-right"></i>
+                    Read more
+                </a>
+            </div>
         </div>
-        <hr>
     {% endif %}
 {% endfor %}
+</div>
 
 {% if not hasProjects %}
     <em>No projects found in this category.</em>

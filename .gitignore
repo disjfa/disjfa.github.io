@@ -2,3 +2,4 @@ _dist
 .sass-cache
 .idea
 node_modules
+build

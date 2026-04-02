@@ -1,7 +1,0 @@
-<p>
-    {% for cat in include.categories %}
-        <a href="{{ "/category/" | append: cat | append: '.html' | prepend: site.baseurl }}" class="badge badge-secondary">
-            {{ cat }}
-        </a>
-    {% endfor %}
-</p>

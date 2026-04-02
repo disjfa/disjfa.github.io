@@ -1,5 +1,7 @@
 import '../scss/main.scss';
 import 'bootstrap';
+import 'prismjs';
+import 'prismjs/themes/prism-twilight.css'
 
 document.querySelectorAll('.js-share').forEach((btn) => {
   if (!navigator.share) {

@@ -7,6 +7,7 @@ tags:
     - css
     - codepen
     - post
+    - css-template
 image: /img/headers/header-codepen-shots-for-practice.jpg
 ---
 

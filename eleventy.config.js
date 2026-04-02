@@ -39,6 +39,7 @@ export default function(eleventyConfig) {
   })
 
   eleventyConfig.addFilter("categorySlug", (value) => slugifyCategory(value));
+  eleventyConfig.addGlobalData("ignoredCategoryTags", [...ignoredCategoryTags]);
 
   eleventyConfig.addCollection('posts', function (collectionsApi) {
     return collectionsApi.getFilteredByTag('post').sort(function (a, b) {

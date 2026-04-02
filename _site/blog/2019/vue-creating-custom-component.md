@@ -17,8 +17,8 @@ We have already started making a vue app. Now let's go and try and make a custom
 
 Now just to get started. Most of the issues and items we are discussing today i learned in a talk about vue. You can checkout the talk here.
 
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WH_zrZpMtCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/WH_zrZpMtCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### The goal

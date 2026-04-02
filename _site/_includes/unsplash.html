@@ -1,3 +1,5 @@
-<div>
-unsplash
-</div>
+{% if unsplashUrl and unsplashUser %}
+<br>
+Photo by <a href="{{ unsplashUrl }}">{{ unsplashUser }}</a> on
+<a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{% endif %}

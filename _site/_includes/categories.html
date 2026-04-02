@@ -1,0 +1,9 @@
+{% if tags %}
+  <div>
+    {%- for tag in tags -%}
+      {% if not (ignoredCategoryTags and (tag in ignoredCategoryTags)) %}
+        <a href="/category/{{ tag | categorySlug }}/" class="btn btn-sm btn-outline-primary lh-sm">{{ tag }}</a>
+      {% endif %}
+    {%- endfor -%}
+  </div>
+{% endif %}
