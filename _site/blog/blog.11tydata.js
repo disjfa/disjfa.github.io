@@ -5,4 +5,3 @@ export default {
     unsplashUser: (data) => data.unsplashUser || data["unsplash-user"] || null,
   },
 };
-

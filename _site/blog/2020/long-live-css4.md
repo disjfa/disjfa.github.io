@@ -8,8 +8,8 @@ image: /img/headers/photo-1478104718532-efe04cc3ff7f.jpg
 unsplash-url: https://unsplash.com/@morganharpernichols?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Morgan Harper Nichols
 tags:
-    - post
-    - css
+  - post
+  - css
 ---
 
 So there is talk online about css4. There is no css4, lets see wat we can do without it. Maybe think of a way to help the argument. If you just want to skip to the end, i made a quick view on the status of css, you can check it [here](https://disjfa.github.io/css4/).
@@ -32,7 +32,7 @@ The rules, for now, are simple. Lets sum up every feature and sort them by relea
 
 We also need to use some browsers. For now we just made the rule we use the 4 major browsers. [chrome](https://www.google.com/chrome/), [edge](https://www.microsoft.com/en-us/edge), [firefox](https://www.mozilla.org/en-US/firefox/new/) and [safari](https://www.apple.com/safari/). Maybe we can add the mobile versions, maybe not. If you have opinions, please share. The data can only get better moving forward.
 
-Just a thought as a reminder, the data we have is for css, html and javascript. So if there is a feature that is not just css, just keep in mind we just made a list of features. The css part is the part we can use for this article, the rest is just more information. Information we can also use. 
+Just a thought as a reminder, the data we have is for css, html and javascript. So if there is a feature that is not just css, just keep in mind we just made a list of features. The css part is the part we can use for this article, the rest is just more information. Information we can also use.
 
 ## Steps
 
@@ -56,11 +56,10 @@ Cool, we have a sample. Lets play some more. We need a support table that can te
 
 ## Cool, data
 
-So now we have the data. We have the list based on dates supported. Now we can tell by a simple list  what has been supported, by date. This is very handy, we can see when we can use features. By date. Also we can just read the entire list to see what we didn't know even existed. Or just to have a log of items to see and learn. There is a date in the list in january 2020 when edge moved over to chromium when a lot released. So january 2020 is a date to remember for support.
+So now we have the data. We have the list based on dates supported. Now we can tell by a simple list what has been supported, by date. This is very handy, we can see when we can use features. By date. Also we can just read the entire list to see what we didn't know even existed. Or just to have a log of items to see and learn. There is a date in the list in january 2020 when edge moved over to chromium when a lot released. So january 2020 is a date to remember for support.
 
 ## Next
 
 Next is just to make the web more awesome! We know what we can use, we know how to make it more awesome. If you have thoughts on the data, please let us know. If you do not agree on a step we used here, feel free to check the source and do you. We just made a list of open data to show the things we like and want to see.
 
 Just make cool stuff.
- 

@@ -4,36 +4,42 @@ title: "Share!"
 date: 2019-07-02 21:17:01
 intro: Checking out the share api in JavaScript
 tags:
-    - javascript
-    - post
+  - javascript
+  - post
 image: /img/headers/photo-1527168027773-0cc890c4f42e.jpg
 unsplash-url: https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Kyle Glenn
 ---
 
-On the internet we share stuff, Facebook, twitter, email, other socials, and so on. We use some links to custom share links and build it up ourselves. When i built some apps i also  share, usually there is a share functionality. Now what if we want to implement share on a simple way, lets see where we can go with it.
+On the internet we share stuff, Facebook, twitter, email, other socials, and so on. We use some links to custom share links and build it up ourselves. When i built some apps i also share, usually there is a share functionality. Now what if we want to implement share on a simple way, lets see where we can go with it.
 
 ### Share api.
 
 As usual, the people of the internet have thought of this already. When i searched for a share api there is one, off course. The [Navigator.share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) api. Awesome.
 
-This sets us up to share the link using the default share slider you see on phones, where you only have the share types you have set up on your phone or device. Useful and clean! 
+This sets us up to share the link using the default share slider you see on phones, where you only have the share types you have set up on your phone or device. Useful and clean!
 
 ### Lets implement.
 
 Next up, a simple implementation. Next we need a button on a page.
 
 ```html
-<a href="#" class="btn btn-outline-secondary js-share" data-title="This is a title" data-text="This is a text" aria-label="Share this page">
-    <i class="fa fa-share-alt"></i>
+<a
+  href="#"
+  class="btn btn-outline-secondary js-share"
+  data-title="This is a title"
+  data-text="This is a text"
+  aria-label="Share this page"
+>
+  <i class="fa fa-share-alt"></i>
 </a>
 ```
 
 Cool, share button using some font awesome share icon! Lets add some JavaScript.
 
 ```javascript
-document.addEventListener('click', (evt) => {
-  const share = evt.target.closest('.js-share');
+document.addEventListener("click", (evt) => {
+  const share = evt.target.closest(".js-share");
   if (!share) {
     return;
   }
@@ -45,7 +51,7 @@ document.addEventListener('click', (evt) => {
   navigator.share({
     title: share.dataset.title,
     text: share.dataset.text,
-    url: share.dataset.url || location.href
+    url: share.dataset.url || location.href,
   });
 
   evt.preventDefault();
@@ -60,7 +66,7 @@ And run the code! I was on a desktop and clicked frantically to see how it all w
 
 So the next step was to ask the internet if we could use that. [Can i use web share api](https://caniuse.com/#feat=web-share). The answer is no, not yet. Not as built in out of the box. As i said earlier, the share api uses the share dialog as used on phones. And the diagram on [caniuse.com](https://caniuse.com) shows mobile browsers only at this point. I read somewhere that macos may be implementing something some time. But not yet. So should we use this, YES!
 
-### Lets poly fill.  
+### Lets poly fill.
 
 Asking the internet some more i found out more people wanted to implement this. So i stumbled upon the [share-api-polyfill](https://github.com/NascHQ/share-api-polyfill). This will add a fallback as we are used on desktops, and implements the same structure as above. So just import the JavaScript to your site and you are good to go.
 

@@ -1,5 +1,5 @@
-document.addEventListener('click', (evt) => {
-  const share = evt.target.closest('.js-share');
+document.addEventListener("click", (evt) => {
+  const share = evt.target.closest(".js-share");
   if (!share) {
     return;
   }
@@ -11,7 +11,7 @@ document.addEventListener('click', (evt) => {
   navigator.share({
     title: share.dataset.title,
     text: share.dataset.text,
-    url: share.dataset.url || location.href
+    url: share.dataset.url || location.href,
   });
 
   evt.preventDefault();

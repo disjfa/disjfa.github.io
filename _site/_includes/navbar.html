@@ -1,19 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/">disjfa.github.io</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#main-nav"
+      aria-controls="main-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="main-nav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a href="/blog/index.html" class="nav-link{% if '/blog/' == page.url %} active{% endif %}">
+          <a
+            href="/blog/index.html"
+            class="nav-link{% if '/blog/' == page.url %} active{% endif %}"
+          >
             <i class="fa-regular fa-fw fa-newspaper"></i>
             Blog
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link{% if '/projects/' == page.url %} active{% endif %}" href="/projects/index.html">
+          <a
+            class="nav-link{% if '/projects/' == page.url %} active{% endif %}"
+            href="/projects/index.html"
+          >
             <i class="fa fa-fw fa-cubes"></i>
 
             Projects

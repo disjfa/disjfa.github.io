@@ -1,21 +1,24 @@
 <meta charset="UTF-8" />
 <meta
-    name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <link
-    rel="alternate"
-    type="application/rss+xml"
-    href="{{ '/feed.xml' | url }}"
+  rel="alternate"
+  type="application/rss+xml"
+  href="{{ '/feed.xml' | url }}"
 />
 
 <meta property="og:title" content="{{ title }}" />
 <meta property="og:description" content="{{ intro }}" />
 {% if image -%}
-<meta property="og:image" content="{{ image }}"/>
+<meta property="og:image" content="{{ image }}" />
 {%- else -%}
-<meta property="og:image" content="/img/headers/photo-1562447574-797880741dd1.jpg"/>
+<meta
+  property="og:image"
+  content="/img/headers/photo-1562447574-797880741dd1.jpg"
+/>
 {%- endif %}
 <meta property="og:site_name" content="disjfa.github.io" />
 {% if tags and tags.indexOf('post') > -1 -%}
@@ -23,7 +26,6 @@
 {%- else -%}
 <meta property="og:type" content="website" />
 {%- endif %}
-
 
 <title>{{ title }} | disjfa.github.io</title>
 <link rel="stylesheet" href="/build/main.css" />

@@ -4,10 +4,10 @@ title: "Codepen: solutions!"
 date: 2019-03-27 21:17:01
 intro: Made an example pen based on a drible
 tags:
-    - css
-    - codepen
-    - post
-    - css-template
+  - css
+  - codepen
+  - post
+  - css-template
 image: /img/headers/header-codepen-solutions.jpg
 ---
 

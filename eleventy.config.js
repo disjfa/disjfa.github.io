@@ -1,9 +1,17 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  const ignoredCategoryTags = new Set(["all", "nav", "post", "posts", "project", "projects", "category-page"]);
+  const ignoredCategoryTags = new Set([
+    "all",
+    "nav",
+    "post",
+    "posts",
+    "project",
+    "projects",
+    "category-page",
+  ]);
 
   const toTagList = (value) => {
     if (!value) {
@@ -25,22 +33,22 @@ export default function(eleventyConfig) {
   // Order matters, put this at the top of your configuration file.
   // This is relative to your input directory!
   eleventyConfig.setInputDirectory("_site");
-  eleventyConfig.setOutputDirectory("_dist")
+  eleventyConfig.setOutputDirectory("_dist");
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("icon");
   eleventyConfig.addPassthroughCopy("build");
-  eleventyConfig.addLayoutAlias('default', 'layouts/default.html')
-  eleventyConfig.addLayoutAlias('sidebar', 'layouts/sidebar.html')
+  eleventyConfig.addLayoutAlias("default", "layouts/default.html");
+  eleventyConfig.addLayoutAlias("sidebar", "layouts/sidebar.html");
 
-  eleventyConfig.addFilter('postDate', (dateObj) => {
+  eleventyConfig.addFilter("postDate", (dateObj) => {
     // Can use toLocaleString the same way we were before
-    return dateObj.toLocaleString('nl-NL', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    })
-  })
+    return dateObj.toLocaleString("nl-NL", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  });
 
   eleventyConfig.addFilter("categorySlug", (value) => slugifyCategory(value));
   eleventyConfig.addGlobalData("ignoredCategoryTags", [...ignoredCategoryTags]);
@@ -55,11 +63,11 @@ export default function(eleventyConfig) {
     return `${path.replace(/\/+$/, "")}/index.html`;
   });
 
-  eleventyConfig.addCollection('posts', function (collectionsApi) {
-    return collectionsApi.getFilteredByTag('post').sort(function (a, b) {
-      return b.date - a.date // sort by date - descending
-    })
-  })
+  eleventyConfig.addCollection("posts", function (collectionsApi) {
+    return collectionsApi.getFilteredByTag("post").sort(function (a, b) {
+      return b.date - a.date; // sort by date - descending
+    });
+  });
 
   eleventyConfig.addCollection("categoryIndex", function (collectionsApi) {
     const counts = new Map();
@@ -94,18 +102,17 @@ export default function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection("projects", function (collectionsApi) {
-    return collectionsApi
-      .getFilteredByTag("project")
-      .sort((a, b) => {
-        if (Boolean(a.data.featured) !== Boolean(b.data.featured)) {
-          return a.data.featured ? -1 : 1;
-        }
+    return collectionsApi.getFilteredByTag("project").sort((a, b) => {
+      if (Boolean(a.data.featured) !== Boolean(b.data.featured)) {
+        return a.data.featured ? -1 : 1;
+      }
 
-        return String(a.data.title || "").localeCompare(String(b.data.title || ""));
-      });
+      return String(a.data.title || "").localeCompare(
+        String(b.data.title || ""),
+      );
+    });
   });
-
-};
+}
 
 export const config = {
   htmlTemplateEngine: "njk",

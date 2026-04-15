@@ -9,7 +9,7 @@ tags:
   - vuejs
 ---
 
-Ok, so i have some stories and now it is time to sum them the * up! Let’s buid an app, an easy app wich explains some more of this vue people are talking about.
+Ok, so i have some stories and now it is time to sum them the \* up! Let’s buid an app, an easy app wich explains some more of this vue people are talking about.
 
 Check out my article on [medium][lets-buid-a-vue-app].
 

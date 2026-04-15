@@ -1,15 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     {% include 'head.html' %}
-</head>
-<body>
-{% include 'navbar.html' %}
+  </head>
+  <body>
+    {% include 'navbar.html' %}
 
-<main role="main">
-    {{ content | safe }}
-</main>
-{% include 'footer.html' %}
-
-</body>
+    <main role="main">{{ content | safe }}</main>
+    {% include 'footer.html' %}
+  </body>
 </html>

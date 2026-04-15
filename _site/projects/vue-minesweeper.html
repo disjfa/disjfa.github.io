@@ -6,39 +6,49 @@ image: /img/projects/vue-minesweeper.png
 intro: Add some minesweeper to your website.
 featured: true
 tags:
-    - vuejs
-    - javascript
-    - vue-plugin
+  - vuejs
+  - javascript
+  - vue-plugin
 ---
-<div class="container py-3">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1>
-                {{ title }}
-            </h1>
-            {% include 'categories.html' %}
-            <p>
-                A vue plugin for minesweeper. Can also be played online.
-            </p>
-            <div class="btn-group">
-                <a href="https://disjfa.github.io/vue-minesweeper/" class="btn btn-outline-primary" aria-label="View example of the vue minesweeper">
-                    <i class="fa fa-desktop"></i>
-                    example
-                </a>
-                <a href="https://www.npmjs.com/package/vue-minesweeper" class="btn btn-outline-primary">
-                    <i class="fa fa-link"></i>
-                    npm
-                </a>
-                <a href="https://github.com/disjfa/vue-minesweeper" class="btn btn-outline-primary" aria-label="Check the source on github">
-                    <i class="fab fa-github"></i>
-                    source
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <img src="{{ image }}" alt="Example of the hella hero"
-                 class="img-thumbnail">
-        </div>
-    </div>
 
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{ title }}</h1>
+      {% include 'categories.html' %}
+      <p>A vue plugin for minesweeper. Can also be played online.</p>
+      <div class="btn-group">
+        <a
+          href="https://disjfa.github.io/vue-minesweeper/"
+          class="btn btn-outline-primary"
+          aria-label="View example of the vue minesweeper"
+        >
+          <i class="fa fa-desktop"></i>
+          example
+        </a>
+        <a
+          href="https://www.npmjs.com/package/vue-minesweeper"
+          class="btn btn-outline-primary"
+        >
+          <i class="fa fa-link"></i>
+          npm
+        </a>
+        <a
+          href="https://github.com/disjfa/vue-minesweeper"
+          class="btn btn-outline-primary"
+          aria-label="Check the source on github"
+        >
+          <i class="fab fa-github"></i>
+          source
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img
+        src="{{ image }}"
+        alt="Example of the hella hero"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
 </div>

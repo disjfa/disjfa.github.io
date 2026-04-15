@@ -3,7 +3,10 @@ layout: layouts/default.html
 image: /img/headers/photo-1562447574-797880741dd1.jpg
 ---
 
-<div class="ryoko" style="background-image: url(/img/headers/photo-1562447574-797880741dd1.jpg)">
+<div
+  class="ryoko"
+  style="background-image: url(/img/headers/photo-1562447574-797880741dd1.jpg)"
+>
   <div class="ryoko-shade ryoko-body">
     <div class="ryoko-faded text-white p-3 my-3">
       <h3>disjfa.github.io</h3>
@@ -11,38 +14,34 @@ image: /img/headers/photo-1562447574-797880741dd1.jpg
   </div>
 </div>
 
-
 <div class="container py-3">
   <h3>
     <i class="fa-regular fa-fw fa-newspaper"></i>
     Blog
   </h3>
   <div class="row">
-    {%- for post in collections.posts -%}
-    {% if loop.index <= 6 %}
-    <div class="col-12 col-lg-4 py-2 d-flex flex-column justify-content-between">
+    {%- for post in collections.posts -%} {% if loop.index <= 6 %}
+    <div
+      class="col-12 col-lg-4 py-2 d-flex flex-column justify-content-between"
+    >
       <a href="{{ post.url }}" class="d-block">
         {% if post.data.image %}
-        <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2">
+        <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2" />
         {% endif %}
-        <h4>
-          {{ post.data.title }}
-        </h4>
+        <h4>{{ post.data.title }}</h4>
       </a>
       <div>
-        <small class="card-text text-muted">
-        </small>
+        <small class="card-text text-muted"> </small>
       </div>
       <p>{{ post.intro }}</p>
       <div>
-      <a href="{{ post.url }}" class="btn btn-outline-primary">
-        <i class="fa fa-angle-double-right"></i>
-        Read more
-      </a>
+        <a href="{{ post.url }}" class="btn btn-outline-primary">
+          <i class="fa fa-angle-double-right"></i>
+          Read more
+        </a>
       </div>
     </div>
-    {% endif %}
-    {%- endfor -%}
+    {% endif %} {%- endfor -%}
     <div class="col-12 pt-3">
       <a href="{{ '/blog/' }}" class="btn btn-primary">
         <i class="fa-regular fa-fw fa-newspaper"></i>
@@ -52,10 +51,9 @@ image: /img/headers/photo-1562447574-797880741dd1.jpg
   </div>
 </div>
 
-
 <div class="bg-light">
   <div class="container py-3">
-    <img src="/img/undraw_welcoming_xvuq.svg" alt="" class="img-fluid">
+    <img src="/img/undraw_welcoming_xvuq.svg" alt="" class="img-fluid" />
   </div>
 </div>
 
@@ -65,12 +63,21 @@ image: /img/headers/photo-1562447574-797880741dd1.jpg
     Projects
   </h3>
   <div class="row">
-    {% for project in collections.projects %}
-    {% if loop.index <= 6 %}
-    <div class="col-12 col-xl-4 col-md-6 py-3 d-flex flex-column justify-content-between">
-      <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="faded d-block">
+    {% for project in collections.projects %} {% if loop.index <= 6 %}
+    <div
+      class="col-12 col-xl-4 col-md-6 py-3 d-flex flex-column justify-content-between"
+    >
+      <a
+        href="{{ project.url }}"
+        aria-label="Read more about {{ project.data.title }}"
+        class="faded d-block"
+      >
         {% if project.data.image %}
-        <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="img-fluid">
+        <img
+          src="{{ project.data.image }}"
+          alt="{{ project.data.title }}"
+          class="img-fluid"
+        />
         {% endif %}
       </a>
       <div class="py-2 flex-grow-1">
@@ -78,14 +85,17 @@ image: /img/headers/photo-1562447574-797880741dd1.jpg
         <p>{{ project.data.intro }}</p>
       </div>
       <div>
-        <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="btn btn-outline-primary">
+        <a
+          href="{{ project.url }}"
+          aria-label="Read more about {{ project.data.title }}"
+          class="btn btn-outline-primary"
+        >
           <i class="fa fa-angle-double-right"></i>
           Read more
         </a>
       </div>
     </div>
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
     <div class="col-12 pt-3">
       <a href="{{ '/projects/' }}" class="btn btn-primary">
         <i class="fa fa-fw fa-cubes"></i>

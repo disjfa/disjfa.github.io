@@ -4,9 +4,9 @@ title: "Mailing with symfony, what can we do!"
 date: 2019-12-02 23:17:01
 intro: Lets see what we can do with the new mime and mailer component
 tags:
-    - symfony
-    - php
-    - post
+  - symfony
+  - php
+  - post
 image: /img/headers/photo-1466096115517-bceecbfb6fde.jpg
 unsplash-url: https://unsplash.com/@mathyaskurmann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Mathyas Kurmann
@@ -20,8 +20,8 @@ If you prefer to skip to the end, just install the [bundle](https://packagist.or
 
 Why we started this. We made a lot of symfony apps and in every app we started a new mail system, awesome they were. But after the third or fourth we knew the basics. But as is in every project we forgot to make a bundle and kept copy pasting the data missing stuff or re-create the methods over and over again. Se lets make a bundle that can be used and re-used.
 
-This will be a setup for the core data of the bundle, so code.  
- 
+This will be a setup for the core data of the bundle, so code.
+
 ### History
 
 So first up, a bit of history in my words. So probably none is true, but i like it. The guys (guys as in plural men and women of course) from symfony used a old package swiftmailer, so they ended up maintaining it. This could be cleaner and nicer, so they made that with the mime component, decoupling the sending in the mailer component. In the way making the components they set it up in a way to make it fancier and add magic. Awesome, now lets get into the code.
@@ -31,10 +31,11 @@ So first up, a bit of history in my words. So probably none is true, but i like 
 This article will talk about the setup, opinionated and the way we would set things up. We will have ideas and opinions. And if you differ from those, you will hopefully learn a thing or two to get you on your own way.
 
 But the basic setup is:
-* make it easy to set up emails in your symfony application.
-* make use of a database, so you can manage and your clients can tinker.
-* generate emails using the [Inlining CSS Styles](Inlining CSS Styles) and [Inky Email Templating Language](https://symfony.com/doc/current/mailer.html#inky-email-templating-language).
-* add a way to test and see what we are actually doing
+
+- make it easy to set up emails in your symfony application.
+- make use of a database, so you can manage and your clients can tinker.
+- generate emails using the [Inlining CSS Styles](Inlining CSS Styles) and [Inky Email Templating Language](https://symfony.com/doc/current/mailer.html#inky-email-templating-language).
+- add a way to test and see what we are actually doing
 
 ### Let's go
 
@@ -77,12 +78,12 @@ class ExampleMail implements MailInterface
     {
         return 'app.example';
     }
-    
+
     public function getSubject(): string
     {
         return 'subject';
     }
-    
+
     public function getContent(): string
     {
         return 'content';
@@ -97,17 +98,21 @@ This will generate the default email when sent.
 The original email must have curly braces which will parsed and used for parameters. So in the subject and the content it should look like.
 
 <!-- {% raw %} -->
+
 ```twig
 This is the email {{ email }}
 ```
+
 <!-- {% endraw %} -->
 
 When you do create a template using twig, please note that you cannot add twig tags directly. So escape them!
 
 <!-- {% raw %} -->
+
 ```twig
 This is the email {{ '{{' }} email {{ '}}' }}
 ```
+
 <!-- {% endraw %} -->
 
 This will be read and checked for parameters. Only parameters made in the original content will be remembered in the system. For now we can also not implement fancy things like loops and extra stuff. The idea is to pre render data which you want to use and set those up as 'simple' parameters.
@@ -121,9 +126,9 @@ So they made live wonderful for people that do not like emails. If you create an
 ```html
 <!-- a simplified example of the Inky syntax -->
 <container>
-    <row>
-        <columns>This is the email {{ email }}.</columns>
-    </row>
+  <row>
+    <columns>This is the email {{ email }}.</columns>
+  </row>
 </container>
 ```
 
@@ -158,23 +163,30 @@ function myFunction(MailFactory $mailFactory, MailService $mailService)
 And done, add this in a function you use and inject the correct data to send them. You can place this wherever. You can even setup the mailer to start sending the emails [async](https://symfony.com/doc/current/mailer.html#sending-messages-async).
 
 ### Checking the emails
+
 For checking the emails there is a command!
+
 ```yaml
 bin/console disjfa:mail:preview-mail
 ```
+
 This will result in a question, and list all the emails found in the application.
+
 ```yaml
 Please select an email
-  [0] disjfa_mail.example
-  [1] ... your email setup
+[0] disjfa_mail.example
+[1] ... your email setup
 ```
+
 Next up, what to do?
+
 ```yaml
 What to do?
-  [0] preview
-  [1] preview raw
-  [2] send email
+[0] preview
+[1] preview raw
+[2] send email
 ```
+
 Preview will just dump the base html. Preview raw will ask for all the parameters in the email and render it out dumping a pile of garbage of table and data structure, which should look awesome in an email application. The last will also ask for an email address and it will send out a test.
 
 Nice! Now you can make, create and test the emails.
@@ -187,9 +199,9 @@ You can add the routes in a `config/routes/disjfa_mail.yaml` file.
 
 ```yaml
 disjfa_mail:
-    resource: '@DisjfaMailBundle/Controller/'
-    type: annotation
-    prefix: '/admin'
+  resource: "@DisjfaMailBundle/Controller/"
+  type: annotation
+  prefix: "/admin"
 ```
 
 In this example the routes are annotated and mapped to the `/admin` folder, just as an example. This should end up in your application. So now you can open up the location. As an example on a localhost.
@@ -210,10 +222,10 @@ The same is for the base email, but in this path `templates/bundles/DisjfaMailBu
 
 Now what? You can add your own and add custom emails in your applications. Send them as you like! Lets check what to do.
 
-* Create a class implementing `MailInterface`.
-* Add some templates as needed.
-* Add some translations as needed.
-* Create a place in your application to send the emails.
+- Create a class implementing `MailInterface`.
+- Add some templates as needed.
+- Add some translations as needed.
+- Create a place in your application to send the emails.
 
 And done. You just created your first email and you did not even need to know much html to get them sending. It sounded like a lot, but in the end it was easy.
 

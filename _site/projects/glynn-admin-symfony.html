@@ -5,34 +5,40 @@ title: Glynn admin symfony4 edition
 image: /img/projects/glynn-admin-symfony.jpg
 intro: Example setup for a symfony project using glynn admin.
 tags:
-    - symfony
-    - glynn-admin
+  - symfony
+  - glynn-admin
 ---
-<div class="container py-3">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1>
-                {{ title }}
-            </h1>
-            {% include 'categories.html' %}
-            <p>
-                If you like the <a href="/projects/glynn-admin/">Glynn admin</a>
-                template, i have setup a basic install for a symfony project.
-            </p>
-            <p>
-                It includes a user login section and a menu builder so you don't have to worry about that.
-            </p>
-            <div class="btn-group">
-                <a href="https://github.com/disjfa/glynn-admin-symfony4" class="btn btn-outline-primary" aria-label="Get the source on github">
-                    <i class="fab fa-github"></i>
-                    source
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <img src="{{ image }}" alt="Example of the glynn admin template"
-                 class="img-thumbnail">
-        </div>
-    </div>
 
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{ title }}</h1>
+      {% include 'categories.html' %}
+      <p>
+        If you like the <a href="/projects/glynn-admin/">Glynn admin</a>
+        template, i have setup a basic install for a symfony project.
+      </p>
+      <p>
+        It includes a user login section and a menu builder so you don't have to
+        worry about that.
+      </p>
+      <div class="btn-group">
+        <a
+          href="https://github.com/disjfa/glynn-admin-symfony4"
+          class="btn btn-outline-primary"
+          aria-label="Get the source on github"
+        >
+          <i class="fab fa-github"></i>
+          source
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img
+        src="{{ image }}"
+        alt="Example of the glynn admin template"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
 </div>

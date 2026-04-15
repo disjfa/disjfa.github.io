@@ -5,38 +5,51 @@ title: Hella hero
 image: /img/projects/hella-hero.png
 intro: Add some choice blocks on your site, it can even use forms.
 tags:
-    - css
-    - css-component
+  - css
+  - css-component
 ---
-<div class="container py-3">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1>
-                {{ title }}
-            </h1>
-            {% include 'categories.html' %}
-            <p>
-                A dynamic hero block for your site, you can place them in a form for more actions.
-            </p>
-            <div class="btn-group">
-                <a href="https://disjfa.github.io/hella-hero/" class="btn btn-outline-primary" aria-label="View example of the hella hero">
-                    <i class="fa fa-desktop"></i>
-                    example
-                </a>
-                <a href="https://www.npmjs.com/package/hella-hero" class="btn btn-outline-primary">
-                    <i class="fa fa-link"></i>
-                    npm
-                </a>
-                <a href="https://github.com/disjfa/hella-hero" class="btn btn-outline-primary" aria-label="Check the source on github">
-                    <i class="fab fa-github"></i>
-                    source
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <img src="{{ image }}" alt="Example of the hella hero"
-                 class="img-thumbnail">
-        </div>
-    </div>
 
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{ title }}</h1>
+      {% include 'categories.html' %}
+      <p>
+        A dynamic hero block for your site, you can place them in a form for
+        more actions.
+      </p>
+      <div class="btn-group">
+        <a
+          href="https://disjfa.github.io/hella-hero/"
+          class="btn btn-outline-primary"
+          aria-label="View example of the hella hero"
+        >
+          <i class="fa fa-desktop"></i>
+          example
+        </a>
+        <a
+          href="https://www.npmjs.com/package/hella-hero"
+          class="btn btn-outline-primary"
+        >
+          <i class="fa fa-link"></i>
+          npm
+        </a>
+        <a
+          href="https://github.com/disjfa/hella-hero"
+          class="btn btn-outline-primary"
+          aria-label="Check the source on github"
+        >
+          <i class="fab fa-github"></i>
+          source
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img
+        src="{{ image }}"
+        alt="Example of the hella hero"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
 </div>

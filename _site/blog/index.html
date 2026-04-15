@@ -15,7 +15,7 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
     <div class="d-block mb-4">
       <a href="{{ post.url }}">
         {% if post.data.image %}
-        <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2">
+        <img src="{{ post.data.image }}" alt="" class="img-thumbnail mb-2" />
         {% endif %}
         <h3>{{ post.data.title }}</h3>
       </a>
@@ -29,7 +29,7 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
         Read more
       </a>
     </div>
-    <hr>
+    <hr />
   </div>
   {%- endfor -%}
 </div>
@@ -44,10 +44,8 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
         Previous
       </a>
     </li>
-    {% endif %}
-
-    {% for pageEntry in pagination.pages %}
-    {% if loop.index0 == pagination.pageNumber %}
+    {% endif %} {% for pageEntry in pagination.pages %} {% if loop.index0 ==
+    pagination.pageNumber %}
     <li class="page-item active">
       <span class="page-link">{{ loop.index }}</span>
     </li>
@@ -57,10 +55,7 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
         {{ loop.index }}
       </a>
     </li>
-    {% endif %}
-    {% endfor %}
-
-    {% if pagination.nextPageHref %}
+    {% endif %} {% endfor %} {% if pagination.nextPageHref %}
     <li class="page-item">
       <a href="{{ pagination.nextPageHref }}" class="page-link">
         Next
@@ -71,4 +66,3 @@ permalink: /blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
   </ul>
 </nav>
 {% endif %}
-

@@ -5,33 +5,43 @@ title: Dimme jour
 image: /img/projects/dimme-jour.jpg
 intro: Responsive wordpress template
 tags:
-    - wordpress
+  - wordpress
 ---
-<div class="container py-3">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1>
-                {{ title }}
-            </h1>
-            {% include 'categories.html' %}
-            <p>
-                A web page created for the <a href="https://a-k-apart.com/">10k apart</a> contest.
-            </p>
-            <div class="btn-group">
-                <a href="http://jour.dimme.nl/" class="btn btn-outline-primary" aria-label="View an example of this template">
-                    <i class="fa fa-desktop"></i>
-                    example
-                </a>
-                <a href="https://wordpress.org/themes/dimme-jour/" class="btn btn-outline-primary" aria-label="Get the theme on the wordpress website">
-                    <i class="fab fa-wordpress"></i>
-                    wordpress
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <img src="{{ image }}" alt="Example of the glynn admin template"
-                 class="img-thumbnail">
-        </div>
-    </div>
 
+<div class="container py-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{ title }}</h1>
+      {% include 'categories.html' %}
+      <p>
+        A web page created for the
+        <a href="https://a-k-apart.com/">10k apart</a> contest.
+      </p>
+      <div class="btn-group">
+        <a
+          href="http://jour.dimme.nl/"
+          class="btn btn-outline-primary"
+          aria-label="View an example of this template"
+        >
+          <i class="fa fa-desktop"></i>
+          example
+        </a>
+        <a
+          href="https://wordpress.org/themes/dimme-jour/"
+          class="btn btn-outline-primary"
+          aria-label="Get the theme on the wordpress website"
+        >
+          <i class="fab fa-wordpress"></i>
+          wordpress
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img
+        src="{{ image }}"
+        alt="Example of the glynn admin template"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
 </div>

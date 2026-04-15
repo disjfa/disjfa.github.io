@@ -6,15 +6,27 @@ title: Projects
 <div class="row">
   {% for project in collections.projects %}
   <div class="col-12 col-md-6 py-3 d-flex flex-column justify-content-between">
-    <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="faded">
-      <img src="{{ project.data.image }}" alt="{{ project.data.title }}" class="img-thumbnail">
+    <a
+      href="{{ project.url }}"
+      aria-label="Read more about {{ project.data.title }}"
+      class="faded"
+    >
+      <img
+        src="{{ project.data.image }}"
+        alt="{{ project.data.title }}"
+        class="img-thumbnail"
+      />
     </a>
     <div class="py-2 flex-grow-1">
       <h3>{{ project.data.title }}</h3>
       <p>{{ project.data.intro }}</p>
     </div>
     <div>
-      <a href="{{ project.url }}" aria-label="Read more about {{ project.data.title }}" class="btn btn-outline-primary">
+      <a
+        href="{{ project.url }}"
+        aria-label="Read more about {{ project.data.title }}"
+        class="btn btn-outline-primary"
+      >
         <i class="fa fa-angle-double-right"></i>
         Read more
       </a>

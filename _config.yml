@@ -6,7 +6,7 @@ description: >
 baseurl: ""
 url: "https://disjfa.github.io"
 twitter_username: disjfa
-github_username:  disjfa
+github_username: disjfa
 
 markdown: kramdown
 host: 0.0.0.0
@@ -30,8 +30,7 @@ kramdown:
   syntax_highlighter: rouge
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: category
     values:

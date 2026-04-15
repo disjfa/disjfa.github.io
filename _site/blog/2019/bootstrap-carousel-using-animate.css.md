@@ -3,10 +3,10 @@ layout: sidebar
 title: "Bootstrap carousel using Animate.css"
 date: 2019-08-20 23:17:01
 intro: Adding some Animate.css to a bootstrap carousel
-tags: 
-    - bootstrap
-    - css
-    - post
+tags:
+  - bootstrap
+  - css
+  - post
 image: /img/headers/photo-1556779914-c46d00d4d8de.jpg
 unsplash-url: https://unsplash.com/@ariel_aguerophoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Ariel_ Agüerophoto
@@ -49,7 +49,11 @@ The `.active` item moves away or fades out on the carousel so that will be used 
 So now we know how to check and manipulate the in and out. Next we need to setup a main carousel and remove the deafult animation. Let's set up a default carousel. Keep the `.slide` class for a base animatin and add a custom `.carousel-...` class we can use to hook into the action.
 
 ```html
-<div id="carousel-zoom" class="carousel slide carousel-animation bg-dark" data-ride="carousel">
+<div
+  id="carousel-zoom"
+  class="carousel slide carousel-animation bg-dark"
+  data-ride="carousel"
+>
   ...
 </div>
 ```
@@ -58,42 +62,42 @@ So now we know how to check and manipulate the in and out. Next we need to setup
 
 ```css
 .carousel-animation .carousel-item {
-    transform: none;
+  transform: none;
 }
 
 .carousel-animation .carousel-item-left.active,
 .carousel-animation .carousel-item-right.active {
-    transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 ```
 
-This will just reset all the animations. Reverts the sliding. So now we can start. 
+This will just reset all the animations. Reverts the sliding. So now we can start.
 
 We can keep it simple and use some animations from [Animate.css](https://daneden.github.io/animate.css/). If you want you can create whatever you like. For now we use the bounceIn and bounceOut animations. Let's just put it all together.
 
 ```css
 .carousel-animation .carousel-item {
-    transform: none;
+  transform: none;
 }
 
 .carousel-animation .carousel-item-left {
-    animation-name: bounceInRight;
-    animation-duration: .65s;
+  animation-name: bounceInRight;
+  animation-duration: 0.65s;
 }
 
 .carousel-animation .carousel-item-left.active {
-    transform: translate(0, 0);
-    animation-name: bounceOutLeft;
+  transform: translate(0, 0);
+  animation-name: bounceOutLeft;
 }
 
 .carousel-animation .carousel-item-right {
-    animation-name: bounceInLeft;
-    animation-duration: .65s;
+  animation-name: bounceInLeft;
+  animation-duration: 0.65s;
 }
 
 .carousel-animation .carousel-item-right.active {
-    transform: translate(0, 0);
-    animation-name: bounceOutRight;
+  transform: translate(0, 0);
+  animation-name: bounceOutRight;
 }
 ```
 

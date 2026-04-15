@@ -5,32 +5,41 @@ title: Bootstrap tricks
 image: /img/projects/bootstrap-tricks.jpg
 intro: Simple and useful tricks using bootstrap (4)
 tags:
-    - bootstrap
-    - css
+  - bootstrap
+  - css
 ---
+
 <div class="container py-3">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1>
-                {{ title }}
-            </h1>
-            {% include 'categories.html' %}
-            <p>
-                Examples of how to use the bootstrap css framework in the wild.
-            </p>
-            <div class="btn-group">
-                <a href="https://disjfa.github.io/bootstrap-tricks/" class="btn btn-outline-primary" aria-label="View the bootstrap tricks">
-                    <i class="fa fa-desktop"></i>
-                    example
-                </a>
-                <a href="https://github.com/disjfa/bootstrap-tricks" class="btn btn-outline-primary" aria-label="Get the source on github">
-                    <i class="fab fa-github"></i>
-                    github
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <img src="{{ image }}" alt="View of the bootstrap tricks website" class="img-thumbnail">
-        </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>{{ title }}</h1>
+      {% include 'categories.html' %}
+      <p>Examples of how to use the bootstrap css framework in the wild.</p>
+      <div class="btn-group">
+        <a
+          href="https://disjfa.github.io/bootstrap-tricks/"
+          class="btn btn-outline-primary"
+          aria-label="View the bootstrap tricks"
+        >
+          <i class="fa fa-desktop"></i>
+          example
+        </a>
+        <a
+          href="https://github.com/disjfa/bootstrap-tricks"
+          class="btn btn-outline-primary"
+          aria-label="Get the source on github"
+        >
+          <i class="fab fa-github"></i>
+          github
+        </a>
+      </div>
     </div>
+    <div class="col-sm-6">
+      <img
+        src="{{ image }}"
+        alt="View of the bootstrap tricks website"
+        class="img-thumbnail"
+      />
+    </div>
+  </div>
 </div>

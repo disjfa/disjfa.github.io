@@ -1,63 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  {% include 'head.html' %}
-</head>
-<body>
+  <head>
+    {% include 'head.html' %}
+  </head>
+  <body>
+    {% include 'navbar.html' %}
 
-{% include 'navbar.html' %}
-
-<main role="main">
-  {% if image %}
-  <div class="ryoko" style="background-image: url({{ image }})">
-    <div class="ryoko-shade ryoko-body">
-    </div>
-  </div>
-  {% endif %}
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 my-3">
-        <a href="#" class="float-end btn btn-outline-secondary js-share" data-title="{{ title }}" data-text="{{ intro }}" data-url="{{ page.url | url }}" aria-label="Share this page">
-          <i class="fa fa-share-alt"></i>
-        </a>
-        <h1>{{ title }}</h1>
-
-        {% if date %}
-          <p class="text-muted mb-2">
-            <small>{{ date | postDate }}</small>
-          </p>
-        {% endif %}
-        {% include 'categories.html' %}
-        {{ content | safe }}
-        {% include 'unsplash.html' %}
+    <main role="main">
+      {% if image %}
+      <div class="ryoko" style="background-image: url({{ image }})">
+        <div class="ryoko-shade ryoko-body"></div>
       </div>
-      <div class="col-md-4">
-        <div class="bg-dark py-3 px-3 my-3">
-          <h3>
-            <i class="fa fa-fw fa-tags"></i>
-            Categories
-          </h3>
-          <hr class="bg-light">
-          {% include 'site-categories.html' %}
-        </div>
-        <div class="bg-dark py-3 px-3 my-3">
-          <h3>
-            <i class="fa fa-fw fa-cubes"></i>
-            Projects
-          </h3>
-          <hr class="bg-light">
-          {% for project in collections.projects %}
-            <a class="d-block py-2" href="{{ project.url }}">
-              {{ project.data.title }}
+      {% endif %}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 my-3">
+            <a
+              href="#"
+              class="float-end btn btn-outline-secondary js-share"
+              data-title="{{ title }}"
+              data-text="{{ intro }}"
+              data-url="{{ page.url | url }}"
+              aria-label="Share this page"
+            >
+              <i class="fa fa-share-alt"></i>
             </a>
-          {% endfor %}
+            <h1>{{ title }}</h1>
+
+            {% if date %}
+            <p class="text-muted mb-2">
+              <small>{{ date | postDate }}</small>
+            </p>
+            {% endif %} {% include 'categories.html' %} {{ content | safe }} {%
+            include 'unsplash.html' %}
+          </div>
+          <div class="col-md-4">
+            <div class="bg-dark py-3 px-3 my-3">
+              <h3>
+                <i class="fa fa-fw fa-tags"></i>
+                Categories
+              </h3>
+              <hr class="bg-light" />
+              {% include 'site-categories.html' %}
+            </div>
+            <div class="bg-dark py-3 px-3 my-3">
+              <h3>
+                <i class="fa fa-fw fa-cubes"></i>
+                Projects
+              </h3>
+              <hr class="bg-light" />
+              {% for project in collections.projects %}
+              <a class="d-block py-2" href="{{ project.url }}">
+                {{ project.data.title }}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-  </div>
-</main>
-
-{% include 'footer.html' %}
-</body>
+    {% include 'footer.html' %}
+  </body>
 </html>

@@ -4,10 +4,10 @@ title: "Vue, creating custom component"
 date: 2019-05-14 21:17:01
 intro: We have already started making a vue app. Now let's go and try and make a custom component using vuejs. It could be useful they said.
 tags:
-    - medium
-    - vuejs
-    - vue-plugin
-    - post
+  - medium
+  - vuejs
+  - vue-plugin
+  - post
 image: /img/headers/photo-1543966888-7c1dc482a810.jpg
 unsplash-url: https://unsplash.com/photos/oZMUrWFHOB4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 unsplash-user: Paul Esch-Laurent
@@ -31,13 +31,17 @@ The goal of today is that we create a full component that can be reused by anyon
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="https://unpkg.com/vue-minesweeper"></script>
 ```
+
 Add some html
+
 ```html
 <div id="app">
   <minesweeper-game>
 </div>
 ```
+
 And a piece of javascript
+
 ```javascript
 var app = new Vue();
 app.$mount("#app");
@@ -55,11 +59,11 @@ Cool, a project. Next we move the `src` folder to a docs folder, we like docs. W
 
 ```json
 {
-    "scripts": {
-        "build": "vue-cli-service build --target lib --name VueMyProject src/index.js",
-        "build:docs": "vue-cli-service build ./docs/main",
-        "serve": "vue-cli-service serve ./docs/main"
-    }
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name VueMyProject src/index.js",
+    "build:docs": "vue-cli-service build ./docs/main",
+    "serve": "vue-cli-service serve ./docs/main"
+  }
 }
 ```
 
@@ -70,17 +74,14 @@ The `build:docs` command builds the docs. The docs we use and abuse for testing 
 Before we start, we are gonna add a new `src` folder and a `src/index.js` main file. This is the start point of the component we are building. As we are making components also add a component in `src/components/MyComponent.vue`. This can be a basic component, you know how to get that started. Code!
 
 ```javascript
-import Vue from 'vue';
-import MyComponent from './components/MyComponent.vue';
+import Vue from "vue";
+import MyComponent from "./components/MyComponent.vue";
 
 function install(Vue, options = {}) {
   Vue.component(MyComponent, MyComponent);
 }
 
-if (typeof window !== 'undefined'
-  && window.Vue
-  && window.Vue === Vue
-) {
+if (typeof window !== "undefined" && window.Vue && window.Vue === Vue) {
   install(window.Vue);
 }
 export default install;
@@ -92,7 +93,7 @@ We import `Vue` from `'vue'`, we import the component we just built. Add a insta
 
 ### Digest some more
 
-Vue on window,  project what not. What are we going on about. The first example is how we "installed" the component as above, in the example earlier. Next one is when we have the component on npm as example and we can import it in our project. Just like any other component in vue, example.
+Vue on window, project what not. What are we going on about. The first example is how we "installed" the component as above, in the example earlier. Next one is when we have the component on npm as example and we can import it in our project. Just like any other component in vue, example.
 
 ```javascript
 import Vue from 'vue';
@@ -106,7 +107,7 @@ Vue.use(MyComponent);
 This import is useful, we can use that in our docs. But our docs won't use the final component, we want to test and build the component. So we change that statement like this
 
 ```javascript
-import MyComponent from '../scr';
+import MyComponent from "../scr";
 ```
 
 We just load the component from the src folder. This so we can use, play around and test the component. Awesome! Now we can just make, test and add on the component as we want. But the component is seperate from the docs. So we have a build for the docs, and for the "main" script. Nice, no hassle of making custom docs or adding weird builds to test or make the thing. Just all in one location we can test.
@@ -121,9 +122,9 @@ This is basically the thing. But we won't end here. We want a bit on the nitty g
 
 ```json
 {
-    "peerDependencies": {
-        "vue": "^2.6.6"
-    }
+  "peerDependencies": {
+    "vue": "^2.6.6"
+  }
 }
 ```
 
@@ -132,12 +133,13 @@ A way to get and set up dependencies is using `peerDependencies`. We know about 
 ### Deploy somewhere
 
 Next we like to deploy somewhere. Somewhere, anywhere. Let's check `package.json`.
+
 ```json
 {
-    "main": "dist/VueMinesweeper.umd.js",
-    "browser": "dist/VueMinesweeper.common.js",
-    "unpkg": "dist/VueMinesweeper.umd.min.js",
-    "jsDelivr": "dist/VueMinesweeper.umd.min.js",
+  "main": "dist/VueMinesweeper.umd.js",
+  "browser": "dist/VueMinesweeper.common.js",
+  "unpkg": "dist/VueMinesweeper.umd.min.js",
+  "jsDelivr": "dist/VueMinesweeper.umd.min.js"
 }
 ```
 
@@ -152,5 +154,3 @@ Components are awesome, but they have limitations. In a time i made a component 
 Yes, even more. There is lots more in the video above, small things to make life harder, like the `--report` flag on the build script. Check if your final package is actually as small as it could. Files in your `package.json` to only deploy files to npm that are actually needed. But i think i will just end things here.
 
 Just don't forget to checkout my example and maybe play some [minesweeper](https://vue-minesweeper.js.org/).
-
-

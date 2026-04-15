@@ -4,10 +4,10 @@ title: "Codepen: Shots for Practice!"
 date: 2019-07-11 21:17:01
 intro: Made an example pen based on a drible
 tags:
-    - css
-    - codepen
-    - post
-    - css-template
+  - css
+  - codepen
+  - post
+  - css-template
 image: /img/headers/header-codepen-shots-for-practice.jpg
 ---
 
