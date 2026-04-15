@@ -11,12 +11,21 @@
 />
 
 <meta property="og:title" content="{{ title }}" />
-<meta property="og:description" content="{{ description }}" />
-<meta property="og:image" content="{{ image }}" />
-<meta property="og:site_name" content="{{ base }}" />
+<meta property="og:description" content="{{ intro }}" />
+{% if image -%}
+<meta property="og:image" content="{{ image }}"/>
+{%- else -%}
+<meta property="og:image" content="/img/headers/photo-1562447574-797880741dd1.jpg"/>
+{%- endif %}
+<meta property="og:site_name" content="disjfa.github.io" />
+{% if tags and tags.indexOf('post') > -1 -%}
 <meta property="og:type" content="article" />
+{%- else -%}
+<meta property="og:type" content="website" />
+{%- endif %}
 
-<title>{{ title }} | {{ base }}</title>
+
+<title>{{ title }} | disjfa.github.io</title>
 <link rel="stylesheet" href="/build/main.css" />
 <script src="/build/runtime.js" defer></script>
 <script src="/build/main.js" defer></script>

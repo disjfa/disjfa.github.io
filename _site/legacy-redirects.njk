@@ -1,0 +1,25 @@
+---
+pagination:
+  data: legacyRedirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from | redirectPermalink }}"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0;url={{ redirect.to }}">
+  <link rel="canonical" href="{{ redirect.to }}">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <p>Redirecting to <a href="{{ redirect.to }}">{{ redirect.to }}</a>...</p>
+  <script>
+    window.location.replace("{{ redirect.to }}" + window.location.search + window.location.hash);
+  </script>
+</body>
+</html>
+

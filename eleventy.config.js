@@ -1,4 +1,8 @@
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+
 export default function(eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   const ignoredCategoryTags = new Set(["all", "nav", "post", "posts", "project", "projects", "category-page"]);
 
   const toTagList = (value) => {
@@ -41,12 +45,19 @@ export default function(eleventyConfig) {
   eleventyConfig.addFilter("categorySlug", (value) => slugifyCategory(value));
   eleventyConfig.addGlobalData("ignoredCategoryTags", [...ignoredCategoryTags]);
 
+  eleventyConfig.addFilter("redirectPermalink", (fromPath) => {
+    const path = `/${String(fromPath || "").replace(/^\/+/, "")}`;
+
+    if (path.endsWith(".html")) {
+      return path;
+    }
+
+    return `${path.replace(/\/+$/, "")}/index.html`;
+  });
+
   eleventyConfig.addCollection('posts', function (collectionsApi) {
     return collectionsApi.getFilteredByTag('post').sort(function (a, b) {
-      //return a.date - b.date; // sort by date - ascending
       return b.date - a.date // sort by date - descending
-      //return a.inputPath.localeCompare(b.inputPath); // sort by path - ascending
-      //return b.inputPath.localeCompare(a.inputPath); // sort by path - descending
     })
   })
 
