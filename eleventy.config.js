@@ -1,7 +1,23 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom", // or "rss", "json"
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts", // iterate over `collections.posts`
+      limit: 10,     // 0 means no limit
+    },
+    metadata: {
+      language: "en",
+      title: "disjfa.github.io",
+      subtitle: "Project website. All my projects bundled into one, here you can check out my projects and check what you want to use maybe. I like to use css, javascript, npm, bootstrap, symfony, 11ty and such.",
+      base: "https://disjfa.github.io/"
+    }
+  });
+
 
   const ignoredCategoryTags = new Set([
     "all",
